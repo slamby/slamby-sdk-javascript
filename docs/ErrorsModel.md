@@ -1,0 +1,9 @@
+# SlambySdk.ErrorsModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**errors** | **[String]** |  | [optional] 
+
+
+
