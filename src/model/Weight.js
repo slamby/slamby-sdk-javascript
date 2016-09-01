@@ -18,7 +18,7 @@
   /**
    * The Weight model module.
    * @module model/Weight
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

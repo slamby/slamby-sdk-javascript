@@ -18,7 +18,7 @@
   /**
    * ClassifierService service.
    * @module api/ClassifierServiceApi
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

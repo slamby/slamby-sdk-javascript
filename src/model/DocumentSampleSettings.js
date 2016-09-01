@@ -18,7 +18,7 @@
   /**
    * The DocumentSampleSettings model module.
    * @module model/DocumentSampleSettings
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * Status service.
    * @module api/StatusApi
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

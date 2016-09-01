@@ -18,7 +18,7 @@
   /**
    * Service service.
    * @module api/ServiceApi
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

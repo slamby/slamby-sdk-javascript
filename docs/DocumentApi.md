@@ -31,8 +31,7 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'settings': new SlambySdk.DocumentBulkSettings(), // DocumentBulkSettings | 
-  'xDataSet': "xDataSet_example" // String | 
+  'settings': new SlambySdk.DocumentBulkSettings() // DocumentBulkSettings | 
 };
 
 apiInstance.bulkDocuments(opts).then(function(data) {
@@ -49,7 +48,6 @@ apiInstance.bulkDocuments(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **settings** | [**DocumentBulkSettings**](DocumentBulkSettings.md)|  | [optional] 
- **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -80,8 +78,7 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'copySettings': new SlambySdk.DocumentCopySettings(), // DocumentCopySettings | 
-  'xDataSet': "xDataSet_example" // String | 
+  'copySettings': new SlambySdk.DocumentCopySettings() // DocumentCopySettings | 
 };
 
 apiInstance.copyDocuments(opts).then(function() {
@@ -98,7 +95,6 @@ apiInstance.copyDocuments(opts).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **copySettings** | [**DocumentCopySettings**](DocumentCopySettings.md)|  | [optional] 
- **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -270,7 +266,6 @@ var apiInstance = new SlambySdk.DocumentApi();
 var scrollId = "scrollId_example"; // String | 
 
 var opts = { 
-  'xDataSet': "xDataSet_example", // String | 
   'filterSettings': new SlambySdk.DocumentFilterSettings() // DocumentFilterSettings | 
 };
 
@@ -288,7 +283,6 @@ apiInstance.getFilteredDocuments(scrollId, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **scrollId** | **String**|  | 
- **xDataSet** | **String**|  | [optional] 
  **filterSettings** | [**DocumentFilterSettings**](DocumentFilterSettings.md)|  | [optional] 
 
 
@@ -320,8 +314,7 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'sampleSettings': new SlambySdk.DocumentSampleSettings(), // DocumentSampleSettings | 
-  'xDataSet': "xDataSet_example" // String | 
+  'sampleSettings': new SlambySdk.DocumentSampleSettings() // DocumentSampleSettings | 
 };
 
 apiInstance.getSampleDocuments(opts).then(function(data) {
@@ -338,7 +331,6 @@ apiInstance.getSampleDocuments(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sampleSettings** | [**DocumentSampleSettings**](DocumentSampleSettings.md)|  | [optional] 
- **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -369,8 +361,7 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'moveSettings': new SlambySdk.DocumentMoveSettings(), // DocumentMoveSettings | 
-  'xDataSet': "xDataSet_example" // String | 
+  'moveSettings': new SlambySdk.DocumentMoveSettings() // DocumentMoveSettings | 
 };
 
 apiInstance.moveDocuments(opts).then(function() {
@@ -387,7 +378,6 @@ apiInstance.moveDocuments(opts).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **moveSettings** | [**DocumentMoveSettings**](DocumentMoveSettings.md)|  | [optional] 
- **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type

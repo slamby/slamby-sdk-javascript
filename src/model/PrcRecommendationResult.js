@@ -18,7 +18,7 @@
   /**
    * The PrcRecommendationResult model module.
    * @module model/PrcRecommendationResult
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

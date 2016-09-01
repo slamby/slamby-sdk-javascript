@@ -18,7 +18,7 @@
   /**
    * The ClassifierActivateSettings model module.
    * @module model/ClassifierActivateSettings
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

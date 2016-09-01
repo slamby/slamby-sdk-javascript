@@ -18,7 +18,7 @@
   /**
    * The ClassifierService model module.
    * @module model/ClassifierService
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

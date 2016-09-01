@@ -18,7 +18,7 @@
   /**
    * The DocumentCopySettings model module.
    * @module model/DocumentCopySettings
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

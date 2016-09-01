@@ -18,7 +18,7 @@
   /**
    * The TagBulkSettings model module.
    * @module model/TagBulkSettings
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

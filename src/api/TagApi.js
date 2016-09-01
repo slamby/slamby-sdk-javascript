@@ -18,7 +18,7 @@
   /**
    * Tag service.
    * @module api/TagApi
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**
@@ -36,7 +36,6 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/TagBulkSettings} opts.settings 
-     * @param {String} opts.xDataSet 
      * data is of type: {module:model/BulkResults}
      */
     this.bulkTags = function(opts) {
@@ -49,7 +48,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };

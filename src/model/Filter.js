@@ -18,7 +18,7 @@
   /**
    * The Filter model module.
    * @module model/Filter
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**

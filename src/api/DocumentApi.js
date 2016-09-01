@@ -18,7 +18,7 @@
   /**
    * Document service.
    * @module api/DocumentApi
-   * @version 1.0.0-rc
+   * @version 1.0.0-rc1
    */
 
   /**
@@ -36,7 +36,6 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/DocumentBulkSettings} opts.settings 
-     * @param {String} opts.xDataSet 
      * data is of type: {module:model/BulkResults}
      */
     this.bulkDocuments = function(opts) {
@@ -49,7 +48,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };
@@ -70,7 +68,6 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/DocumentCopySettings} opts.copySettings 
-     * @param {String} opts.xDataSet 
      */
     this.copyDocuments = function(opts) {
       opts = opts || {};
@@ -82,7 +79,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };
@@ -205,7 +201,6 @@
     /**
      * @param {String} scrollId 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.xDataSet 
      * @param {module:model/DocumentFilterSettings} opts.filterSettings 
      * data is of type: {module:model/PaginatedListObject}
      */
@@ -225,7 +220,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };
@@ -246,7 +240,6 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/DocumentSampleSettings} opts.sampleSettings 
-     * @param {String} opts.xDataSet 
      * data is of type: {module:model/PaginatedListObject}
      */
     this.getSampleDocuments = function(opts) {
@@ -259,7 +252,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };
@@ -280,7 +272,6 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/DocumentMoveSettings} opts.moveSettings 
-     * @param {String} opts.xDataSet 
      */
     this.moveDocuments = function(opts) {
       opts = opts || {};
@@ -292,7 +283,6 @@
       var queryParams = {
       };
       var headerParams = {
-        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };
