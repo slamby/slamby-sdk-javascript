@@ -18,11 +18,12 @@
   /**
    * The ClassifierService model module.
    * @module model/ClassifierService
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>ClassifierService</code>.
+   * For the common properties detail check the [Service](#/definitions/Service)
    * @alias module:model/ClassifierService
    * @class
    * @param name
@@ -34,6 +35,7 @@
 
 
     this['Name'] = name;
+
 
 
     this['Type'] = type;
@@ -69,6 +71,9 @@ exports.prototype.typeName = 'ClassifierService';
       if (data.hasOwnProperty('Name')) {
         obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
       }
+      if (data.hasOwnProperty('Alias')) {
+        obj['Alias'] = ApiClient.convertToType(data['Alias'], 'String');
+      }
       if (data.hasOwnProperty('Description')) {
         obj['Description'] = ApiClient.convertToType(data['Description'], 'String');
       }
@@ -100,31 +105,43 @@ exports.prototype.typeName = 'ClassifierService';
   exports.prototype['ActivateSettings'] = undefined;
 
   /**
+   * Service unique identifier. It cannot be modified.
    * @member {String} Id
    */
   exports.prototype['Id'] = undefined;
 
   /**
+   * User-defined name for the service
    * @member {String} Name
    */
   exports.prototype['Name'] = undefined;
 
   /**
+   * Alias name of the service. Services can be accessed via this name.\r\n            Alias can be modified. It is unique amongst the services.
+   * @member {String} Alias
+   */
+  exports.prototype['Alias'] = undefined;
+
+  /**
+   * Service description
    * @member {String} Description
    */
   exports.prototype['Description'] = undefined;
 
   /**
+   * New - the service was created | \r\n            Busy - the service is working on something (e.g.: during the Prepare) | \r\n            Prepared - the service was prepared so you can activate it to use | \r\n            Active - the service so you can use it
    * @member {module:model/ClassifierService.StatusEnum} Status
    */
   exports.prototype['Status'] = undefined;
 
   /**
+   * Type of the service.\r\n            Currently supported types:\r\n            - Classifier\r\n            - Prc
    * @member {module:model/ClassifierService.TypeEnum} Type
    */
   exports.prototype['Type'] = undefined;
 
   /**
+   * Contains all the process ids which belong to this service
    * @member {Array.<String>} ProcessIdList
    */
   exports.prototype['ProcessIdList'] = undefined;

@@ -18,11 +18,12 @@
   /**
    * The Process model module.
    * @module model/Process
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>Process</code>.
+   * 
    * @alias module:model/Process
    * @class
    */
@@ -88,36 +89,43 @@ exports.prototype.typeName = 'Process';
 
 
   /**
+   * The process GUID identifier
    * @member {String} Id
    */
   exports.prototype['Id'] = undefined;
 
   /**
+   * The UTC time of the process start
    * @member {Date} Start
    */
   exports.prototype['Start'] = undefined;
 
   /**
+   * The UTC time of the process end
    * @member {Date} End
    */
   exports.prototype['End'] = undefined;
 
   /**
+   * The percent of the whole process. (e.g.: 12.23 means 12.23%)
    * @member {Number} Percent
    */
   exports.prototype['Percent'] = undefined;
 
   /**
+   * Process description
    * @member {String} Description
    */
   exports.prototype['Description'] = undefined;
 
   /**
+   * InProgress - the process is in progress, it's working |\r\n            Cancelled - the process was cancelled by the user |\r\n            Finished - the process was finished successfully |\r\n            Error - the process stopped by an error, see the ErrorMessages for detailed information |\r\n            Interrupted - the process was interrupted by an unknown event (e.g.: server restart) - under development |\r\n            Paused - the process was paused  - under development
    * @member {module:model/Process.StatusEnum} Status
    */
   exports.prototype['Status'] = undefined;
 
   /**
+   * Type of the process
    * @member {module:model/Process.TypeEnum} Type
    */
   exports.prototype['Type'] = undefined;
@@ -173,7 +181,13 @@ exports.prototype.typeName = 'Process';
      * value: Paused
      * @const
      */
-    PAUSED: "Paused"
+    PAUSED: "Paused",
+    
+    /**
+     * value: Cancelling
+     * @const
+     */
+    CANCELLING: "Cancelling"
   };  /**
    * Allowed values for the <code>Type</code> property.
    * @enum {String}
@@ -208,7 +222,31 @@ exports.prototype.typeName = 'Process';
      * value: TagsExportWords
      * @const
      */
-    TAGSEXPORTWORDS: "TagsExportWords"
+    TAGSEXPORTWORDS: "TagsExportWords",
+    
+    /**
+     * value: ClassifierActivate
+     * @const
+     */
+    CLASSIFIERACTIVATE: "ClassifierActivate",
+    
+    /**
+     * value: PrcActivate
+     * @const
+     */
+    PRCACTIVATE: "PrcActivate",
+    
+    /**
+     * value: PrcIndex
+     * @const
+     */
+    PRCINDEX: "PrcIndex",
+    
+    /**
+     * value: PrcIndexPartial
+     * @const
+     */
+    PRCINDEXPARTIAL: "PrcIndexPartial"
   };
 
   return exports;

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelObject'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelObject'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.DocumentBulkSettings = factory(root.SlambySdk.ApiClient, root.SlambySdk.ModelObject);
+    root.SlambySdk.DocumentBulkSettings = factory(root.SlambySdk.ApiClient);
   }
-}(this, function(ApiClient, ModelObject) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The DocumentBulkSettings model module.
    * @module model/DocumentBulkSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -49,7 +49,7 @@ exports.prototype.typeName = 'DocumentBulkSettings';
       obj = obj || new exports();
 
       if (data.hasOwnProperty('Documents')) {
-        obj['Documents'] = ApiClient.convertToType(data['Documents'], [ModelObject]);
+        obj['Documents'] = ApiClient.convertToType(data['Documents'], [Object]);
       }
     }
     return obj;
@@ -57,7 +57,8 @@ exports.prototype.typeName = 'DocumentBulkSettings';
 
 
   /**
-   * @member {Array.<module:model/ModelObject>} Documents
+   * Array of the documents to be saved
+   * @member {Array.<Object>} Documents
    */
   exports.prototype['Documents'] = undefined;
 

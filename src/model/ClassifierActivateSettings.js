@@ -18,11 +18,12 @@
   /**
    * The ClassifierActivateSettings model module.
    * @module model/ClassifierActivateSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>ClassifierActivateSettings</code>.
+   * These settings are required for the recommendation (Recommend method)
    * @alias module:model/ClassifierActivateSettings
    * @class
    */
@@ -64,16 +65,19 @@ exports.prototype.typeName = 'ClassifierActivateSettings';
 
 
   /**
+   * The list of the tag Ids which will emphasized during the recommendation
    * @member {Array.<String>} EmphasizedTagIdList
    */
   exports.prototype['EmphasizedTagIdList'] = undefined;
 
   /**
+   * \"The list of the tag Ids which will be activated (the recommendation will be contains these only)
    * @member {Array.<String>} TagIdList
    */
   exports.prototype['TagIdList'] = undefined;
 
   /**
+   * The list of the NGrams will be activated (the recommendation algorithm will be use these only)
    * @member {Array.<Integer>} NGramList
    */
   exports.prototype['NGramList'] = undefined;

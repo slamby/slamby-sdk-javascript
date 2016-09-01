@@ -3,10 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**offset** | **Integer** |  | [optional] 
-**limit** | **Integer** |  | [optional] 
-**orderDirection** | **String** |  | [optional] 
-**orderByField** | **String** |  | [optional] 
+**limit** | **Integer** | How many element you want to get back in this request | [optional] 
 
 
 

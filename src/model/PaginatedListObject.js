@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelObject', './Pagination'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelObject'), require('./Pagination'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.PaginatedListObject = factory(root.SlambySdk.ApiClient, root.SlambySdk.ModelObject, root.SlambySdk.Pagination);
+    root.SlambySdk.PaginatedListObject = factory(root.SlambySdk.ApiClient);
   }
-}(this, function(ApiClient, ModelObject, Pagination) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The PaginatedListObject model module.
    * @module model/PaginatedListObject
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -51,10 +51,7 @@ exports.prototype.typeName = 'PaginatedListObject';
       obj = obj || new exports();
 
       if (data.hasOwnProperty('Items')) {
-        obj['Items'] = ApiClient.convertToType(data['Items'], [ModelObject]);
-      }
-      if (data.hasOwnProperty('Pagination')) {
-        obj['Pagination'] = Pagination.constructFromObject(data['Pagination']);
+        obj['Items'] = ApiClient.convertToType(data['Items'], [Object]);
       }
       if (data.hasOwnProperty('Count')) {
         obj['Count'] = ApiClient.convertToType(data['Count'], 'Integer');
@@ -62,30 +59,37 @@ exports.prototype.typeName = 'PaginatedListObject';
       if (data.hasOwnProperty('Total')) {
         obj['Total'] = ApiClient.convertToType(data['Total'], 'Integer');
       }
+      if (data.hasOwnProperty('ScrollId')) {
+        obj['ScrollId'] = ApiClient.convertToType(data['ScrollId'], 'String');
+      }
     }
     return obj;
   }
 
 
   /**
-   * @member {Array.<module:model/ModelObject>} Items
+   * Containing the actual displayed items. The type of the elements depend on the method
+   * @member {Array.<Object>} Items
    */
   exports.prototype['Items'] = undefined;
 
   /**
-   * @member {module:model/Pagination} Pagination
-   */
-  exports.prototype['Pagination'] = undefined;
-
-  /**
+   * The count of the actual returned items
    * @member {Integer} Count
    */
   exports.prototype['Count'] = undefined;
 
   /**
+   * The count of all items which are the pagination applied
    * @member {Integer} Total
    */
   exports.prototype['Total'] = undefined;
+
+  /**
+   * Identifier for the next series of items where it is applicable
+   * @member {String} ScrollId
+   */
+  exports.prototype['ScrollId'] = undefined;
 
 
 

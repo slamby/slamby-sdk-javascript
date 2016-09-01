@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**createDocument**](DocumentApi.md#createDocument) | **POST** /api/Documents | 
 [**deleteDocument**](DocumentApi.md#deleteDocument) | **DELETE** /api/Documents/{id} | 
 [**getDocument**](DocumentApi.md#getDocument) | **GET** /api/Documents/{id} | 
-[**getFilteredDocuments**](DocumentApi.md#getFilteredDocuments) | **POST** /api/Documents/Filter | 
+[**getFilteredDocuments**](DocumentApi.md#getFilteredDocuments) | **POST** /api/Documents/Filter/{scrollId} | 
 [**getSampleDocuments**](DocumentApi.md#getSampleDocuments) | **POST** /api/Documents/Sample | 
 [**moveDocuments**](DocumentApi.md#moveDocuments) | **POST** /api/Documents/Move | 
 [**updateDocument**](DocumentApi.md#updateDocument) | **PUT** /api/Documents/{id} | 
@@ -31,7 +31,8 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'settings': new SlambySdk.DocumentBulkSettings() // DocumentBulkSettings | 
+  'settings': new SlambySdk.DocumentBulkSettings(), // DocumentBulkSettings | 
+  'xDataSet': "xDataSet_example" // String | 
 };
 
 apiInstance.bulkDocuments(opts).then(function(data) {
@@ -48,6 +49,7 @@ apiInstance.bulkDocuments(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **settings** | [**DocumentBulkSettings**](DocumentBulkSettings.md)|  | [optional] 
+ **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -78,7 +80,8 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'copySettings': new SlambySdk.DocumentCopySettings() // DocumentCopySettings | 
+  'copySettings': new SlambySdk.DocumentCopySettings(), // DocumentCopySettings | 
+  'xDataSet': "xDataSet_example" // String | 
 };
 
 apiInstance.copyDocuments(opts).then(function() {
@@ -95,6 +98,7 @@ apiInstance.copyDocuments(opts).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **copySettings** | [**DocumentCopySettings**](DocumentCopySettings.md)|  | [optional] 
+ **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -125,7 +129,7 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'document': new SlambySdk.ModelObject() // ModelObject | 
+  'document': null // Object | 
 };
 
 apiInstance.createDocument(opts).then(function() {
@@ -141,7 +145,7 @@ apiInstance.createDocument(opts).then(function() {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document** | [**ModelObject**](ModelObject.md)|  | [optional] 
+ **document** | **Object**|  | [optional] 
 
 
 ### Return type
@@ -206,7 +210,7 @@ No authorization required
 
 <a name="getDocument"></a>
 # **getDocument**
-> ModelObject getDocument(id)
+> Object getDocument(id)
 
 
 
@@ -238,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelObject**](ModelObject.md)
+**Object**
 
 ### Authorization
 
@@ -252,7 +256,7 @@ No authorization required
 
 <a name="getFilteredDocuments"></a>
 # **getFilteredDocuments**
-> PaginatedListObject getFilteredDocuments(opts)
+> PaginatedListObject getFilteredDocuments(scrollId, opts)
 
 
 
@@ -263,11 +267,14 @@ var SlambySdk = require('slamby-sdk');
 
 var apiInstance = new SlambySdk.DocumentApi();
 
+var scrollId = "scrollId_example"; // String | 
+
 var opts = { 
+  'xDataSet': "xDataSet_example", // String | 
   'filterSettings': new SlambySdk.DocumentFilterSettings() // DocumentFilterSettings | 
 };
 
-apiInstance.getFilteredDocuments(opts).then(function(data) {
+apiInstance.getFilteredDocuments(scrollId, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -280,6 +287,8 @@ apiInstance.getFilteredDocuments(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **scrollId** | **String**|  | 
+ **xDataSet** | **String**|  | [optional] 
  **filterSettings** | [**DocumentFilterSettings**](DocumentFilterSettings.md)|  | [optional] 
 
 
@@ -311,7 +320,8 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'sampleSettings': new SlambySdk.DocumentSampleSettings() // DocumentSampleSettings | 
+  'sampleSettings': new SlambySdk.DocumentSampleSettings(), // DocumentSampleSettings | 
+  'xDataSet': "xDataSet_example" // String | 
 };
 
 apiInstance.getSampleDocuments(opts).then(function(data) {
@@ -328,6 +338,7 @@ apiInstance.getSampleDocuments(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sampleSettings** | [**DocumentSampleSettings**](DocumentSampleSettings.md)|  | [optional] 
+ **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -358,7 +369,8 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.DocumentApi();
 
 var opts = { 
-  'moveSettings': new SlambySdk.DocumentMoveSettings() // DocumentMoveSettings | 
+  'moveSettings': new SlambySdk.DocumentMoveSettings(), // DocumentMoveSettings | 
+  'xDataSet': "xDataSet_example" // String | 
 };
 
 apiInstance.moveDocuments(opts).then(function() {
@@ -375,6 +387,7 @@ apiInstance.moveDocuments(opts).then(function() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **moveSettings** | [**DocumentMoveSettings**](DocumentMoveSettings.md)|  | [optional] 
+ **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type
@@ -393,7 +406,7 @@ No authorization required
 
 <a name="updateDocument"></a>
 # **updateDocument**
-> ModelObject updateDocument(id, opts)
+> Object updateDocument(id, opts)
 
 
 
@@ -407,7 +420,7 @@ var apiInstance = new SlambySdk.DocumentApi();
 var id = "id_example"; // String | 
 
 var opts = { 
-  'document': new SlambySdk.ModelObject() // ModelObject | 
+  'document': null // Object | 
 };
 
 apiInstance.updateDocument(id, opts).then(function(data) {
@@ -424,12 +437,12 @@ apiInstance.updateDocument(id, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
- **document** | [**ModelObject**](ModelObject.md)|  | [optional] 
+ **document** | **Object**|  | [optional] 
 
 
 ### Return type
 
-[**ModelObject**](ModelObject.md)
+**Object**
 
 ### Authorization
 

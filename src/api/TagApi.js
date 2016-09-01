@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/BulkResults', '../model/TagBulkSettings', '../model/ErrorsModel', '../model/Tag', '../model/Process', '../model/TagsExportWordsSettings'], factory);
+    define(['../ApiClient', '../model/BulkResults', '../model/ErrorsModel', '../model/TagBulkSettings', '../model/Tag', '../model/Process', '../model/TagsExportWordsSettings'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BulkResults'), require('../model/TagBulkSettings'), require('../model/ErrorsModel'), require('../model/Tag'), require('../model/Process'), require('../model/TagsExportWordsSettings'));
+    module.exports = factory(require('../ApiClient'), require('../model/BulkResults'), require('../model/ErrorsModel'), require('../model/TagBulkSettings'), require('../model/Tag'), require('../model/Process'), require('../model/TagsExportWordsSettings'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.TagApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.BulkResults, root.SlambySdk.TagBulkSettings, root.SlambySdk.ErrorsModel, root.SlambySdk.Tag, root.SlambySdk.Process, root.SlambySdk.TagsExportWordsSettings);
+    root.SlambySdk.TagApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.BulkResults, root.SlambySdk.ErrorsModel, root.SlambySdk.TagBulkSettings, root.SlambySdk.Tag, root.SlambySdk.Process, root.SlambySdk.TagsExportWordsSettings);
   }
-}(this, function(ApiClient, BulkResults, TagBulkSettings, ErrorsModel, Tag, Process, TagsExportWordsSettings) {
+}(this, function(ApiClient, BulkResults, ErrorsModel, TagBulkSettings, Tag, Process, TagsExportWordsSettings) {
   'use strict';
 
   /**
    * Tag service.
    * @module api/TagApi
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -36,6 +36,7 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/TagBulkSettings} opts.settings 
+     * @param {String} opts.xDataSet 
      * data is of type: {module:model/BulkResults}
      */
     this.bulkTags = function(opts) {
@@ -48,6 +49,7 @@
       var queryParams = {
       };
       var headerParams = {
+        'X-DataSet': opts['xDataSet']
       };
       var formParams = {
       };

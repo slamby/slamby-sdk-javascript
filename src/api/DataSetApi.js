@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/DataSet', '../model/ErrorsModel'], factory);
+    define(['../ApiClient', '../model/DataSet', '../model/ErrorsModel', '../model/DataSetUpdate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DataSet'), require('../model/ErrorsModel'));
+    module.exports = factory(require('../ApiClient'), require('../model/DataSet'), require('../model/ErrorsModel'), require('../model/DataSetUpdate'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.DataSetApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.DataSet, root.SlambySdk.ErrorsModel);
+    root.SlambySdk.DataSetApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.DataSet, root.SlambySdk.ErrorsModel, root.SlambySdk.DataSetUpdate);
   }
-}(this, function(ApiClient, DataSet, ErrorsModel) {
+}(this, function(ApiClient, DataSet, ErrorsModel, DataSetUpdate) {
   'use strict';
 
   /**
    * DataSet service.
    * @module api/DataSetApi
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -58,6 +58,37 @@
 
       return this.apiClient.callApi(
         '/api/DataSets', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DataSet} opts.dataSet 
+     */
+    this.createDataSetSchema = function(opts) {
+      opts = opts || {};
+      var postBody = opts['dataSet'];
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/api/DataSets/Schema', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -158,6 +189,44 @@
 
       return this.apiClient.callApi(
         '/api/DataSets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+
+    /**
+     * @param {String} existingName 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DataSetUpdate} opts.dataSetUpdate 
+     */
+    this.updateDataSet = function(existingName, opts) {
+      opts = opts || {};
+      var postBody = opts['dataSetUpdate'];
+
+      // verify the required parameter 'existingName' is set
+      if (existingName == undefined || existingName == null) {
+        throw "Missing the required parameter 'existingName' when calling updateDataSet";
+      }
+
+
+      var pathParams = {
+        'existingName': existingName
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/api/DataSets/{existingName}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

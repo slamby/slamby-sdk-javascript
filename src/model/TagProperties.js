@@ -18,11 +18,12 @@
   /**
    * The TagProperties model module.
    * @module model/TagProperties
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>TagProperties</code>.
+   * Contains calculated values for the tag
    * @alias module:model/TagProperties
    * @class
    */
@@ -51,8 +52,8 @@ exports.prototype.typeName = 'TagProperties';
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Path')) {
-        obj['Path'] = ApiClient.convertToType(data['Path'], [PathItem]);
+      if (data.hasOwnProperty('Paths')) {
+        obj['Paths'] = ApiClient.convertToType(data['Paths'], [PathItem]);
       }
       if (data.hasOwnProperty('Level')) {
         obj['Level'] = ApiClient.convertToType(data['Level'], 'Integer');
@@ -72,26 +73,31 @@ exports.prototype.typeName = 'TagProperties';
 
 
   /**
-   * @member {Array.<module:model/PathItem>} Path
+   * A tag list contains parent path elements
+   * @member {Array.<module:model/PathItem>} Paths
    */
-  exports.prototype['Path'] = undefined;
+  exports.prototype['Paths'] = undefined;
 
   /**
+   * The level of the tag in the hierarchy (root level is: 0)
    * @member {Integer} Level
    */
   exports.prototype['Level'] = undefined;
 
   /**
+   * If the tag is a leaf tag. Leaf tag means the tag is not a parent of any other tags
    * @member {Boolean} IsLeaf
    */
   exports.prototype['IsLeaf'] = undefined;
 
   /**
+   * Document count for the tag
    * @member {Integer} DocumentCount
    */
   exports.prototype['DocumentCount'] = undefined;
 
   /**
+   * Word count for the tag
    * @member {Integer} WordCount
    */
   exports.prototype['WordCount'] = undefined;

@@ -4,19 +4,19 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**activateService**](ClassifierServiceApi.md#activateService) | **POST** /api/Services/Classifier/{id}/Activate | 
-[**deactivateService**](ClassifierServiceApi.md#deactivateService) | **POST** /api/Services/Classifier/{id}/Deactivate | 
-[**exportDictionaries**](ClassifierServiceApi.md#exportDictionaries) | **POST** /api/Services/Classifier/{id}/ExportDictionaries | 
-[**getService**](ClassifierServiceApi.md#getService) | **GET** /api/Services/Classifier/{id} | 
-[**prepareService**](ClassifierServiceApi.md#prepareService) | **POST** /api/Services/Classifier/{id}/Prepare | 
-[**recommendService**](ClassifierServiceApi.md#recommendService) | **POST** /api/Services/Classifier/{id}/Recommend | 
+[**classifierActivateService**](ClassifierServiceApi.md#classifierActivateService) | **POST** /api/Services/Classifier/{id}/Activate | 
+[**classifierDeactivateService**](ClassifierServiceApi.md#classifierDeactivateService) | **POST** /api/Services/Classifier/{id}/Deactivate | 
+[**classifierExportDictionaries**](ClassifierServiceApi.md#classifierExportDictionaries) | **POST** /api/Services/Classifier/{id}/ExportDictionaries | 
+[**classifierGetService**](ClassifierServiceApi.md#classifierGetService) | **GET** /api/Services/Classifier/{id} | 
+[**classifierPrepareService**](ClassifierServiceApi.md#classifierPrepareService) | **POST** /api/Services/Classifier/{id}/Prepare | 
+[**classifierRecommendService**](ClassifierServiceApi.md#classifierRecommendService) | **POST** /api/Services/Classifier/{id}/Recommend | 
 
 
 
 
-<a name="activateService"></a>
-# **activateService**
-> activateService(id, opts)
+<a name="classifierActivateService"></a>
+# **classifierActivateService**
+> Process classifierActivateService(id, opts)
 
 
 
@@ -33,8 +33,8 @@ var opts = {
   'classifierActivateSettings': new SlambySdk.ClassifierActivateSettings() // ClassifierActivateSettings | 
 };
 
-apiInstance.activateService(id, opts).then(function() {
-  console.log('API called successfully.');
+apiInstance.classifierActivateService(id, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Process**](Process.md)
 
 ### Authorization
 
@@ -64,9 +64,9 @@ No authorization required
  - **Accept**: Not defined
 
 
-<a name="deactivateService"></a>
-# **deactivateService**
-> deactivateService(id)
+<a name="classifierDeactivateService"></a>
+# **classifierDeactivateService**
+> classifierDeactivateService(id)
 
 
 
@@ -80,7 +80,7 @@ var apiInstance = new SlambySdk.ClassifierServiceApi();
 var id = "id_example"; // String | 
 
 
-apiInstance.deactivateService(id).then(function() {
+apiInstance.classifierDeactivateService(id).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);
@@ -110,9 +110,9 @@ No authorization required
  - **Accept**: Not defined
 
 
-<a name="exportDictionaries"></a>
-# **exportDictionaries**
-> Process exportDictionaries(id, opts)
+<a name="classifierExportDictionaries"></a>
+# **classifierExportDictionaries**
+> Process classifierExportDictionaries(id, opts)
 
 
 
@@ -129,7 +129,7 @@ var opts = {
   'settings': new SlambySdk.ExportDictionariesSettings() // ExportDictionariesSettings | 
 };
 
-apiInstance.exportDictionaries(id, opts).then(function(data) {
+apiInstance.classifierExportDictionaries(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -160,9 +160,9 @@ No authorization required
  - **Accept**: Not defined
 
 
-<a name="getService"></a>
-# **getService**
-> ClassifierService getService(id)
+<a name="classifierGetService"></a>
+# **classifierGetService**
+> ClassifierService classifierGetService(id)
 
 
 
@@ -176,7 +176,7 @@ var apiInstance = new SlambySdk.ClassifierServiceApi();
 var id = "id_example"; // String | 
 
 
-apiInstance.getService(id).then(function(data) {
+apiInstance.classifierGetService(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -206,9 +206,9 @@ No authorization required
  - **Accept**: Not defined
 
 
-<a name="prepareService"></a>
-# **prepareService**
-> Process prepareService(id, opts)
+<a name="classifierPrepareService"></a>
+# **classifierPrepareService**
+> Process classifierPrepareService(id, opts)
 
 
 
@@ -225,7 +225,7 @@ var opts = {
   'classifierPrepareSettings': new SlambySdk.ClassifierPrepareSettings() // ClassifierPrepareSettings | 
 };
 
-apiInstance.prepareService(id, opts).then(function(data) {
+apiInstance.classifierPrepareService(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -256,9 +256,9 @@ No authorization required
  - **Accept**: Not defined
 
 
-<a name="recommendService"></a>
-# **recommendService**
-> [ClassifierRecommendationResult] recommendService(id, opts)
+<a name="classifierRecommendService"></a>
+# **classifierRecommendService**
+> [ClassifierRecommendationResult] classifierRecommendService(id, opts)
 
 
 
@@ -275,7 +275,7 @@ var opts = {
   'request': new SlambySdk.ClassifierRecommendationRequest() // ClassifierRecommendationRequest | 
 };
 
-apiInstance.recommendService(id, opts).then(function(data) {
+apiInstance.classifierRecommendService(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

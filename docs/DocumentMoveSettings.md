@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ids** | **[String]** |  | 
-**targetDataSetName** | **String** |  | 
+**documentIdList** | **[String]** | The Id list of the documents you want to move | 
+**targetDataSetName** | **String** | The DataSet name where you want to move the selected documents | 
 
 
 

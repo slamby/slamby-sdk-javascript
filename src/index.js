@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/BulkResult', './model/BulkResults', './model/ClassifierActivateSettings', './model/ClassifierPrepareSettings', './model/ClassifierRecommendationRequest', './model/ClassifierRecommendationResult', './model/ClassifierService', './model/DataSet', './model/DataSetStats', './model/DocumentBulkSettings', './model/DocumentCopySettings', './model/DocumentFilterSettings', './model/DocumentMoveSettings', './model/DocumentSampleSettings', './model/ErrorsModel', './model/ExportDictionariesSettings', './model/Filter', './model/ModelObject', './model/PaginatedListObject', './model/Pagination', './model/PathItem', './model/PrcActivateSettings', './model/PrcPrepareSettings', './model/PrcRecommendationRequest', './model/PrcRecommendationResult', './model/PrcService', './model/Process', './model/Service', './model/Status', './model/Tag', './model/TagBulkSettings', './model/TagProperties', './model/TagsExportWordsSettings', './model/Weight', './api/ClassifierServiceApi', './api/DataSetApi', './api/DocumentApi', './api/PrcServiceApi', './api/ProcessApi', './api/ServiceApi', './api/StatusApi', './api/TagApi'], factory);
+    define(['./ApiClient', './model/BulkResult', './model/BulkResults', './model/ClassifierActivateSettings', './model/ClassifierPrepareSettings', './model/ClassifierRecommendationRequest', './model/ClassifierRecommendationResult', './model/ClassifierService', './model/CompressSettings', './model/DataSet', './model/DataSetStats', './model/DataSetUpdate', './model/DocumentBulkSettings', './model/DocumentCopySettings', './model/DocumentFilterSettings', './model/DocumentMoveSettings', './model/DocumentSampleSettings', './model/ErrorsModel', './model/ExportDictionariesSettings', './model/FileParser', './model/FileParserResult', './model/Filter', './model/Order', './model/PaginatedListObject', './model/Pagination', './model/PathItem', './model/PrcActivateSettings', './model/PrcIndexSettings', './model/PrcKeywordsRequest', './model/PrcKeywordsResult', './model/PrcPrepareSettings', './model/PrcRecommendationByIdRequest', './model/PrcRecommendationRequest', './model/PrcRecommendationResult', './model/PrcService', './model/Process', './model/Service', './model/Status', './model/Tag', './model/TagBulkSettings', './model/TagProperties', './model/TagsExportWordsSettings', './model/Weight', './api/ClassifierServiceApi', './api/DataSetApi', './api/DocumentApi', './api/HelperApi', './api/PrcServiceApi', './api/ProcessApi', './api/ServiceApi', './api/StatusApi', './api/TagApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BulkResult'), require('./model/BulkResults'), require('./model/ClassifierActivateSettings'), require('./model/ClassifierPrepareSettings'), require('./model/ClassifierRecommendationRequest'), require('./model/ClassifierRecommendationResult'), require('./model/ClassifierService'), require('./model/DataSet'), require('./model/DataSetStats'), require('./model/DocumentBulkSettings'), require('./model/DocumentCopySettings'), require('./model/DocumentFilterSettings'), require('./model/DocumentMoveSettings'), require('./model/DocumentSampleSettings'), require('./model/ErrorsModel'), require('./model/ExportDictionariesSettings'), require('./model/Filter'), require('./model/ModelObject'), require('./model/PaginatedListObject'), require('./model/Pagination'), require('./model/PathItem'), require('./model/PrcActivateSettings'), require('./model/PrcPrepareSettings'), require('./model/PrcRecommendationRequest'), require('./model/PrcRecommendationResult'), require('./model/PrcService'), require('./model/Process'), require('./model/Service'), require('./model/Status'), require('./model/Tag'), require('./model/TagBulkSettings'), require('./model/TagProperties'), require('./model/TagsExportWordsSettings'), require('./model/Weight'), require('./api/ClassifierServiceApi'), require('./api/DataSetApi'), require('./api/DocumentApi'), require('./api/PrcServiceApi'), require('./api/ProcessApi'), require('./api/ServiceApi'), require('./api/StatusApi'), require('./api/TagApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/BulkResult'), require('./model/BulkResults'), require('./model/ClassifierActivateSettings'), require('./model/ClassifierPrepareSettings'), require('./model/ClassifierRecommendationRequest'), require('./model/ClassifierRecommendationResult'), require('./model/ClassifierService'), require('./model/CompressSettings'), require('./model/DataSet'), require('./model/DataSetStats'), require('./model/DataSetUpdate'), require('./model/DocumentBulkSettings'), require('./model/DocumentCopySettings'), require('./model/DocumentFilterSettings'), require('./model/DocumentMoveSettings'), require('./model/DocumentSampleSettings'), require('./model/ErrorsModel'), require('./model/ExportDictionariesSettings'), require('./model/FileParser'), require('./model/FileParserResult'), require('./model/Filter'), require('./model/Order'), require('./model/PaginatedListObject'), require('./model/Pagination'), require('./model/PathItem'), require('./model/PrcActivateSettings'), require('./model/PrcIndexSettings'), require('./model/PrcKeywordsRequest'), require('./model/PrcKeywordsResult'), require('./model/PrcPrepareSettings'), require('./model/PrcRecommendationByIdRequest'), require('./model/PrcRecommendationRequest'), require('./model/PrcRecommendationResult'), require('./model/PrcService'), require('./model/Process'), require('./model/Service'), require('./model/Status'), require('./model/Tag'), require('./model/TagBulkSettings'), require('./model/TagProperties'), require('./model/TagsExportWordsSettings'), require('./model/Weight'), require('./api/ClassifierServiceApi'), require('./api/DataSetApi'), require('./api/DocumentApi'), require('./api/HelperApi'), require('./api/PrcServiceApi'), require('./api/ProcessApi'), require('./api/ServiceApi'), require('./api/StatusApi'), require('./api/TagApi'));
   }
-}(function(ApiClient, BulkResult, BulkResults, ClassifierActivateSettings, ClassifierPrepareSettings, ClassifierRecommendationRequest, ClassifierRecommendationResult, ClassifierService, DataSet, DataSetStats, DocumentBulkSettings, DocumentCopySettings, DocumentFilterSettings, DocumentMoveSettings, DocumentSampleSettings, ErrorsModel, ExportDictionariesSettings, Filter, ModelObject, PaginatedListObject, Pagination, PathItem, PrcActivateSettings, PrcPrepareSettings, PrcRecommendationRequest, PrcRecommendationResult, PrcService, Process, Service, Status, Tag, TagBulkSettings, TagProperties, TagsExportWordsSettings, Weight, ClassifierServiceApi, DataSetApi, DocumentApi, PrcServiceApi, ProcessApi, ServiceApi, StatusApi, TagApi) {
+}(function(ApiClient, BulkResult, BulkResults, ClassifierActivateSettings, ClassifierPrepareSettings, ClassifierRecommendationRequest, ClassifierRecommendationResult, ClassifierService, CompressSettings, DataSet, DataSetStats, DataSetUpdate, DocumentBulkSettings, DocumentCopySettings, DocumentFilterSettings, DocumentMoveSettings, DocumentSampleSettings, ErrorsModel, ExportDictionariesSettings, FileParser, FileParserResult, Filter, Order, PaginatedListObject, Pagination, PathItem, PrcActivateSettings, PrcIndexSettings, PrcKeywordsRequest, PrcKeywordsResult, PrcPrepareSettings, PrcRecommendationByIdRequest, PrcRecommendationRequest, PrcRecommendationResult, PrcService, Process, Service, Status, Tag, TagBulkSettings, TagProperties, TagsExportWordsSettings, Weight, ClassifierServiceApi, DataSetApi, DocumentApi, HelperApi, PrcServiceApi, ProcessApi, ServiceApi, StatusApi, TagApi) {
   'use strict';
 
   /**
@@ -38,7 +38,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
   var exports = {
     /**
@@ -82,6 +82,11 @@
      */
     ClassifierService: ClassifierService,
     /**
+     * The CompressSettings model constructor.
+     * @property {module:model/CompressSettings}
+     */
+    CompressSettings: CompressSettings,
+    /**
      * The DataSet model constructor.
      * @property {module:model/DataSet}
      */
@@ -91,6 +96,11 @@
      * @property {module:model/DataSetStats}
      */
     DataSetStats: DataSetStats,
+    /**
+     * The DataSetUpdate model constructor.
+     * @property {module:model/DataSetUpdate}
+     */
+    DataSetUpdate: DataSetUpdate,
     /**
      * The DocumentBulkSettings model constructor.
      * @property {module:model/DocumentBulkSettings}
@@ -127,15 +137,25 @@
      */
     ExportDictionariesSettings: ExportDictionariesSettings,
     /**
+     * The FileParser model constructor.
+     * @property {module:model/FileParser}
+     */
+    FileParser: FileParser,
+    /**
+     * The FileParserResult model constructor.
+     * @property {module:model/FileParserResult}
+     */
+    FileParserResult: FileParserResult,
+    /**
      * The Filter model constructor.
      * @property {module:model/Filter}
      */
     Filter: Filter,
     /**
-     * The ModelObject model constructor.
-     * @property {module:model/ModelObject}
+     * The Order model constructor.
+     * @property {module:model/Order}
      */
-    ModelObject: ModelObject,
+    Order: Order,
     /**
      * The PaginatedListObject model constructor.
      * @property {module:model/PaginatedListObject}
@@ -157,10 +177,30 @@
      */
     PrcActivateSettings: PrcActivateSettings,
     /**
+     * The PrcIndexSettings model constructor.
+     * @property {module:model/PrcIndexSettings}
+     */
+    PrcIndexSettings: PrcIndexSettings,
+    /**
+     * The PrcKeywordsRequest model constructor.
+     * @property {module:model/PrcKeywordsRequest}
+     */
+    PrcKeywordsRequest: PrcKeywordsRequest,
+    /**
+     * The PrcKeywordsResult model constructor.
+     * @property {module:model/PrcKeywordsResult}
+     */
+    PrcKeywordsResult: PrcKeywordsResult,
+    /**
      * The PrcPrepareSettings model constructor.
      * @property {module:model/PrcPrepareSettings}
      */
     PrcPrepareSettings: PrcPrepareSettings,
+    /**
+     * The PrcRecommendationByIdRequest model constructor.
+     * @property {module:model/PrcRecommendationByIdRequest}
+     */
+    PrcRecommendationByIdRequest: PrcRecommendationByIdRequest,
     /**
      * The PrcRecommendationRequest model constructor.
      * @property {module:model/PrcRecommendationRequest}
@@ -231,6 +271,11 @@
      * @property {module:api/DocumentApi}
      */
     DocumentApi: DocumentApi,
+    /**
+     * The HelperApi service constructor.
+     * @property {module:api/HelperApi}
+     */
+    HelperApi: HelperApi,
     /**
      * The PrcServiceApi service constructor.
      * @property {module:api/PrcServiceApi}

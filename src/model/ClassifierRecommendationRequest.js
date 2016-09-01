@@ -18,7 +18,7 @@
   /**
    * The ClassifierRecommendationRequest model module.
    * @module model/ClassifierRecommendationRequest
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -69,21 +69,25 @@ exports.prototype.typeName = 'ClassifierRecommendationRequest';
 
 
   /**
+   * The text the you want to classify
    * @member {String} Text
    */
   exports.prototype['Text'] = undefined;
 
   /**
+   * How many results you want to see in the response (default value is 3)
    * @member {Integer} Count
    */
   exports.prototype['Count'] = undefined;
 
   /**
+   * Use emphasizing algorithm during this recommendation
    * @member {Boolean} UseEmphasizing
    */
   exports.prototype['UseEmphasizing'] = undefined;
 
   /**
+   * If you want to see all the tag object in the response
    * @member {Boolean} NeedTagInResult
    */
   exports.prototype['NeedTagInResult'] = undefined;

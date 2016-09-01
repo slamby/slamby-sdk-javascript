@@ -18,11 +18,12 @@
   /**
    * The ErrorsModel model module.
    * @module model/ErrorsModel
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>ErrorsModel</code>.
+   * Stores error messages
    * @alias module:model/ErrorsModel
    * @class
    */

@@ -30,7 +30,8 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.TagApi();
 
 var opts = { 
-  'settings': new SlambySdk.TagBulkSettings() // TagBulkSettings | 
+  'settings': new SlambySdk.TagBulkSettings(), // TagBulkSettings | 
+  'xDataSet': "xDataSet_example" // String | 
 };
 
 apiInstance.bulkTags(opts).then(function(data) {
@@ -47,6 +48,7 @@ apiInstance.bulkTags(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **settings** | [**TagBulkSettings**](TagBulkSettings.md)|  | [optional] 
+ **xDataSet** | **String**|  | [optional] 
 
 
 ### Return type

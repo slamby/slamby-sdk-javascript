@@ -18,11 +18,12 @@
   /**
    * The BulkResult model module.
    * @module model/BulkResult
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>BulkResult</code>.
+   * \&quot;Result of a bulk save element.\r\n            If the save was successful then the StatusCode is 2XX. \r\n            If there was a problem, the StatusCode is not 2XX, and the error message is in the Error field.
    * @alias module:model/BulkResult
    * @class
    */
@@ -64,16 +65,19 @@ exports.prototype.typeName = 'BulkResult';
 
 
   /**
+   * HTTP status code
    * @member {Integer} StatusCode
    */
   exports.prototype['StatusCode'] = undefined;
 
   /**
+   * Document id
    * @member {String} Id
    */
   exports.prototype['Id'] = undefined;
 
   /**
+   * Error message
    * @member {String} Error
    */
   exports.prototype['Error'] = undefined;

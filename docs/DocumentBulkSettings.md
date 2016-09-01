@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**documents** | [**[ModelObject]**](ModelObject.md) |  | 
+**documents** | **[Object]** | Array of the documents to be saved | 
 
 
 

@@ -18,11 +18,12 @@
   /**
    * The Weight model module.
    * @module model/Weight
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>Weight</code>.
+   * Weight object
    * @alias module:model/Weight
    * @class
    */

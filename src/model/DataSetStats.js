@@ -18,11 +18,12 @@
   /**
    * The DataSetStats model module.
    * @module model/DataSetStats
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>DataSetStats</code>.
+   * DataSetStats object
    * @alias module:model/DataSetStats
    * @class
    */
@@ -56,6 +57,7 @@ exports.prototype.typeName = 'DataSetStats';
 
 
   /**
+   * Shows the available document number
    * @member {Integer} DocumentsCount
    */
   exports.prototype['DocumentsCount'] = undefined;

@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Filter', './Pagination'], factory);
+    define(['../ApiClient', './Filter', './Order', './Pagination'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Filter'), require('./Pagination'));
+    module.exports = factory(require('../ApiClient'), require('./Filter'), require('./Order'), require('./Pagination'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.DocumentFilterSettings = factory(root.SlambySdk.ApiClient, root.SlambySdk.Filter, root.SlambySdk.Pagination);
+    root.SlambySdk.DocumentFilterSettings = factory(root.SlambySdk.ApiClient, root.SlambySdk.Filter, root.SlambySdk.Order, root.SlambySdk.Pagination);
   }
-}(this, function(ApiClient, Filter, Pagination) {
+}(this, function(ApiClient, Filter, Order, Pagination) {
   'use strict';
 
   /**
    * The DocumentFilterSettings model module.
    * @module model/DocumentFilterSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -30,6 +30,7 @@
   var exports = function(pagination) {
 
     this['Pagination'] = pagination;
+
 
 
   };
@@ -53,11 +54,14 @@ exports.prototype.typeName = 'DocumentFilterSettings';
       if (data.hasOwnProperty('Pagination')) {
         obj['Pagination'] = Pagination.constructFromObject(data['Pagination']);
       }
-      if (data.hasOwnProperty('IdsOnly')) {
-        obj['IdsOnly'] = ApiClient.convertToType(data['IdsOnly'], 'Boolean');
+      if (data.hasOwnProperty('Order')) {
+        obj['Order'] = Order.constructFromObject(data['Order']);
       }
       if (data.hasOwnProperty('Filter')) {
         obj['Filter'] = Filter.constructFromObject(data['Filter']);
+      }
+      if (data.hasOwnProperty('FieldList')) {
+        obj['FieldList'] = ApiClient.convertToType(data['FieldList'], ['String']);
       }
     }
     return obj;
@@ -70,14 +74,20 @@ exports.prototype.typeName = 'DocumentFilterSettings';
   exports.prototype['Pagination'] = undefined;
 
   /**
-   * @member {Boolean} IdsOnly
+   * @member {module:model/Order} Order
    */
-  exports.prototype['IdsOnly'] = undefined;
+  exports.prototype['Order'] = undefined;
 
   /**
    * @member {module:model/Filter} Filter
    */
   exports.prototype['Filter'] = undefined;
+
+  /**
+   * Query returns only with the specified field(s)
+   * @member {Array.<String>} FieldList
+   */
+  exports.prototype['FieldList'] = undefined;
 
 
 

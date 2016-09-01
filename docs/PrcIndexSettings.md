@@ -1,8 +1,9 @@
-# SlambySdk.ModelObject
+# SlambySdk.PrcIndexSettings
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**filter** | [**Filter**](Filter.md) |  | [optional] 
 
 
 

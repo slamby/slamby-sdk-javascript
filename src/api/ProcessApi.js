@@ -18,7 +18,7 @@
   /**
    * Process service.
    * @module api/ProcessApi
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**

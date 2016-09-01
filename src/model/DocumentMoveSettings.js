@@ -18,19 +18,19 @@
   /**
    * The DocumentMoveSettings model module.
    * @module model/DocumentMoveSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>DocumentMoveSettings</code>.
    * @alias module:model/DocumentMoveSettings
    * @class
-   * @param ids
+   * @param documentIdList
    * @param targetDataSetName
    */
-  var exports = function(ids, targetDataSetName) {
+  var exports = function(documentIdList, targetDataSetName) {
 
-    this['Ids'] = ids;
+    this['DocumentIdList'] = documentIdList;
     this['TargetDataSetName'] = targetDataSetName;
   };
 
@@ -50,8 +50,8 @@ exports.prototype.typeName = 'DocumentMoveSettings';
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Ids')) {
-        obj['Ids'] = ApiClient.convertToType(data['Ids'], ['String']);
+      if (data.hasOwnProperty('DocumentIdList')) {
+        obj['DocumentIdList'] = ApiClient.convertToType(data['DocumentIdList'], ['String']);
       }
       if (data.hasOwnProperty('TargetDataSetName')) {
         obj['TargetDataSetName'] = ApiClient.convertToType(data['TargetDataSetName'], 'String');
@@ -62,11 +62,13 @@ exports.prototype.typeName = 'DocumentMoveSettings';
 
 
   /**
-   * @member {Array.<String>} Ids
+   * The Id list of the documents you want to move
+   * @member {Array.<String>} DocumentIdList
    */
-  exports.prototype['Ids'] = undefined;
+  exports.prototype['DocumentIdList'] = undefined;
 
   /**
+   * The DataSet name where you want to move the selected documents
    * @member {String} TargetDataSetName
    */
   exports.prototype['TargetDataSetName'] = undefined;

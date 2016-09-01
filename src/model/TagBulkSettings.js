@@ -18,11 +18,12 @@
   /**
    * The TagBulkSettings model module.
    * @module model/TagBulkSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>TagBulkSettings</code>.
+   * Stores complete tag hierarchy for bulk insert
    * @alias module:model/TagBulkSettings
    * @class
    * @param tags
@@ -57,6 +58,7 @@ exports.prototype.typeName = 'TagBulkSettings';
 
 
   /**
+   * The complete tag hierarchy array
    * @member {Array.<module:model/Tag>} Tags
    */
   exports.prototype['Tags'] = undefined;

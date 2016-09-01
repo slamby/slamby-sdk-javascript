@@ -18,11 +18,12 @@
   /**
    * The TagsExportWordsSettings model module.
    * @module model/TagsExportWordsSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>TagsExportWordsSettings</code>.
+   * 
    * @alias module:model/TagsExportWordsSettings
    * @class
    * @param nGramList

@@ -18,11 +18,12 @@
   /**
    * The PathItem model module.
    * @module model/PathItem
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>PathItem</code>.
+   * Tag path item object
    * @alias module:model/PathItem
    * @class
    */
@@ -64,16 +65,19 @@ exports.prototype.typeName = 'PathItem';
 
 
   /**
+   * Id of the Tag
    * @member {String} Id
    */
   exports.prototype['Id'] = undefined;
 
   /**
+   * Name of the Tag
    * @member {String} Name
    */
   exports.prototype['Name'] = undefined;
 
   /**
+   * Level of the Tag
    * @member {Integer} Level
    */
   exports.prototype['Level'] = undefined;

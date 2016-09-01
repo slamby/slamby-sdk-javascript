@@ -18,11 +18,12 @@
   /**
    * The Status model module.
    * @module model/Status
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>Status</code>.
+   * Status object
    * @alias module:model/Status
    * @class
    */
@@ -76,31 +77,37 @@ exports.prototype.typeName = 'Status';
 
 
   /**
+   * API version string
    * @member {String} ApiVersion
    */
   exports.prototype['ApiVersion'] = undefined;
 
   /**
+   * Number of processors on the API machine
    * @member {Integer} ProcessorCount
    */
   exports.prototype['ProcessorCount'] = undefined;
 
   /**
+   * CPU usage %
    * @member {Number} CpuUsage
    */
   exports.prototype['CpuUsage'] = undefined;
 
   /**
+   * Available free disk space in MB
    * @member {Number} AvailableFreeSpace
    */
   exports.prototype['AvailableFreeSpace'] = undefined;
 
   /**
+   * Total physical memory in MB
    * @member {Number} TotalMemory
    */
   exports.prototype['TotalMemory'] = undefined;
 
   /**
+   * Free physical memory in MB
    * @member {Number} FreeMemory
    */
   exports.prototype['FreeMemory'] = undefined;

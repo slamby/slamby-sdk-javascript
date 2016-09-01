@@ -18,7 +18,7 @@
   /**
    * The BulkResults model module.
    * @module model/BulkResults
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -56,6 +56,7 @@ exports.prototype.typeName = 'BulkResults';
 
 
   /**
+   * Array of the documents to be saved
    * @member {Array.<module:model/BulkResult>} Results
    */
   exports.prototype['Results'] = undefined;

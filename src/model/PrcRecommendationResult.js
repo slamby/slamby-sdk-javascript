@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ModelObject'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ModelObject'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.PrcRecommendationResult = factory(root.SlambySdk.ApiClient, root.SlambySdk.ModelObject);
+    root.SlambySdk.PrcRecommendationResult = factory(root.SlambySdk.ApiClient);
   }
-}(this, function(ApiClient, ModelObject) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The PrcRecommendationResult model module.
    * @module model/PrcRecommendationResult
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -56,7 +56,7 @@ exports.prototype.typeName = 'PrcRecommendationResult';
         obj['Score'] = ApiClient.convertToType(data['Score'], 'Number');
       }
       if (data.hasOwnProperty('Document')) {
-        obj['Document'] = ModelObject.constructFromObject(data['Document']);
+        obj['Document'] = ApiClient.convertToType(data['Document'], Object);
       }
     }
     return obj;
@@ -74,7 +74,7 @@ exports.prototype.typeName = 'PrcRecommendationResult';
   exports.prototype['Score'] = undefined;
 
   /**
-   * @member {module:model/ModelObject} Document
+   * @member {Object} Document
    */
   exports.prototype['Document'] = undefined;
 

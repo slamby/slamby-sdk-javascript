@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ErrorsModel', '../model/ClassifierActivateSettings', '../model/ExportDictionariesSettings', '../model/Process', '../model/ClassifierService', '../model/ClassifierPrepareSettings', '../model/ClassifierRecommendationRequest', '../model/ClassifierRecommendationResult'], factory);
+    define(['../ApiClient', '../model/ErrorsModel', '../model/ClassifierActivateSettings', '../model/Process', '../model/ExportDictionariesSettings', '../model/ClassifierService', '../model/ClassifierPrepareSettings', '../model/ClassifierRecommendationRequest', '../model/ClassifierRecommendationResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorsModel'), require('../model/ClassifierActivateSettings'), require('../model/ExportDictionariesSettings'), require('../model/Process'), require('../model/ClassifierService'), require('../model/ClassifierPrepareSettings'), require('../model/ClassifierRecommendationRequest'), require('../model/ClassifierRecommendationResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorsModel'), require('../model/ClassifierActivateSettings'), require('../model/Process'), require('../model/ExportDictionariesSettings'), require('../model/ClassifierService'), require('../model/ClassifierPrepareSettings'), require('../model/ClassifierRecommendationRequest'), require('../model/ClassifierRecommendationResult'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.ClassifierServiceApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.ErrorsModel, root.SlambySdk.ClassifierActivateSettings, root.SlambySdk.ExportDictionariesSettings, root.SlambySdk.Process, root.SlambySdk.ClassifierService, root.SlambySdk.ClassifierPrepareSettings, root.SlambySdk.ClassifierRecommendationRequest, root.SlambySdk.ClassifierRecommendationResult);
+    root.SlambySdk.ClassifierServiceApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.ErrorsModel, root.SlambySdk.ClassifierActivateSettings, root.SlambySdk.Process, root.SlambySdk.ExportDictionariesSettings, root.SlambySdk.ClassifierService, root.SlambySdk.ClassifierPrepareSettings, root.SlambySdk.ClassifierRecommendationRequest, root.SlambySdk.ClassifierRecommendationResult);
   }
-}(this, function(ApiClient, ErrorsModel, ClassifierActivateSettings, ExportDictionariesSettings, Process, ClassifierService, ClassifierPrepareSettings, ClassifierRecommendationRequest, ClassifierRecommendationResult) {
+}(this, function(ApiClient, ErrorsModel, ClassifierActivateSettings, Process, ExportDictionariesSettings, ClassifierService, ClassifierPrepareSettings, ClassifierRecommendationRequest, ClassifierRecommendationResult) {
   'use strict';
 
   /**
    * ClassifierService service.
    * @module api/ClassifierServiceApi
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -37,14 +37,15 @@
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/ClassifierActivateSettings} opts.classifierActivateSettings 
+     * data is of type: {module:model/Process}
      */
-    this.activateService = function(id, opts) {
+    this.classifierActivateService = function(id, opts) {
       opts = opts || {};
       var postBody = opts['classifierActivateSettings'];
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling activateService";
+        throw "Missing the required parameter 'id' when calling classifierActivateService";
       }
 
 
@@ -61,7 +62,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = [];
-      var returnType = null;
+      var returnType = Process;
 
       return this.apiClient.callApi(
         '/api/Services/Classifier/{id}/Activate', 'POST',
@@ -74,12 +75,12 @@
     /**
      * @param {String} id 
      */
-    this.deactivateService = function(id) {
+    this.classifierDeactivateService = function(id) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling deactivateService";
+        throw "Missing the required parameter 'id' when calling classifierDeactivateService";
       }
 
 
@@ -112,13 +113,13 @@
      * @param {module:model/ExportDictionariesSettings} opts.settings 
      * data is of type: {module:model/Process}
      */
-    this.exportDictionaries = function(id, opts) {
+    this.classifierExportDictionaries = function(id, opts) {
       opts = opts || {};
       var postBody = opts['settings'];
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling exportDictionaries";
+        throw "Missing the required parameter 'id' when calling classifierExportDictionaries";
       }
 
 
@@ -149,12 +150,12 @@
      * @param {String} id 
      * data is of type: {module:model/ClassifierService}
      */
-    this.getService = function(id) {
+    this.classifierGetService = function(id) {
       var postBody = null;
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling getService";
+        throw "Missing the required parameter 'id' when calling classifierGetService";
       }
 
 
@@ -187,13 +188,13 @@
      * @param {module:model/ClassifierPrepareSettings} opts.classifierPrepareSettings 
      * data is of type: {module:model/Process}
      */
-    this.prepareService = function(id, opts) {
+    this.classifierPrepareService = function(id, opts) {
       opts = opts || {};
       var postBody = opts['classifierPrepareSettings'];
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling prepareService";
+        throw "Missing the required parameter 'id' when calling classifierPrepareService";
       }
 
 
@@ -226,13 +227,13 @@
      * @param {module:model/ClassifierRecommendationRequest} opts.request 
      * data is of type: {Array.<module:model/ClassifierRecommendationResult>}
      */
-    this.recommendService = function(id, opts) {
+    this.classifierRecommendService = function(id, opts) {
       opts = opts || {};
       var postBody = opts['request'];
 
       // verify the required parameter 'id' is set
       if (id == undefined || id == null) {
-        throw "Missing the required parameter 'id' when calling recommendService";
+        throw "Missing the required parameter 'id' when calling classifierRecommendService";
       }
 
 

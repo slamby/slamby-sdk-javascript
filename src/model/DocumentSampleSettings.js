@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Pagination'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Pagination'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.DocumentSampleSettings = factory(root.SlambySdk.ApiClient, root.SlambySdk.Pagination);
+    root.SlambySdk.DocumentSampleSettings = factory(root.SlambySdk.ApiClient);
   }
-}(this, function(ApiClient, Pagination) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
    * The DocumentSampleSettings model module.
    * @module model/DocumentSampleSettings
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -26,14 +26,11 @@
    * @alias module:model/DocumentSampleSettings
    * @class
    * @param id
-   * @param pagination
    */
-  var exports = function(id, pagination) {
+  var exports = function(id) {
 
     this['Id'] = id;
 
-
-    this['Pagination'] = pagination;
 
 
 
@@ -58,14 +55,8 @@ exports.prototype.typeName = 'DocumentSampleSettings';
       if (data.hasOwnProperty('Id')) {
         obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
       }
-      if (data.hasOwnProperty('TagIds')) {
-        obj['TagIds'] = ApiClient.convertToType(data['TagIds'], ['String']);
-      }
-      if (data.hasOwnProperty('IsStratified')) {
-        obj['IsStratified'] = ApiClient.convertToType(data['IsStratified'], 'Boolean');
-      }
-      if (data.hasOwnProperty('Pagination')) {
-        obj['Pagination'] = Pagination.constructFromObject(data['Pagination']);
+      if (data.hasOwnProperty('TagIdList')) {
+        obj['TagIdList'] = ApiClient.convertToType(data['TagIdList'], ['String']);
       }
       if (data.hasOwnProperty('Percent')) {
         obj['Percent'] = ApiClient.convertToType(data['Percent'], 'Number');
@@ -73,8 +64,8 @@ exports.prototype.typeName = 'DocumentSampleSettings';
       if (data.hasOwnProperty('Size')) {
         obj['Size'] = ApiClient.convertToType(data['Size'], 'Integer');
       }
-      if (data.hasOwnProperty('IdsOnly')) {
-        obj['IdsOnly'] = ApiClient.convertToType(data['IdsOnly'], 'Boolean');
+      if (data.hasOwnProperty('FieldList')) {
+        obj['FieldList'] = ApiClient.convertToType(data['FieldList'], ['String']);
       }
     }
     return obj;
@@ -82,39 +73,34 @@ exports.prototype.typeName = 'DocumentSampleSettings';
 
 
   /**
+   * It must be a random string for every new sampling, but must be the same for the same sampling during pagination. \r\n            If you leave it empty then it'll be generated automatically, but then you can not use pagination
    * @member {String} Id
    */
   exports.prototype['Id'] = undefined;
 
   /**
-   * @member {Array.<String>} TagIds
+   * You can create a sample from a whole dataset, or just from a given tag section. \r\n            To create a sample from the whole dataset please keep it empty. \r\n            To create a sample from a given number of tags please provide the tag ids
+   * @member {Array.<String>} TagIdList
    */
-  exports.prototype['TagIds'] = undefined;
+  exports.prototype['TagIdList'] = undefined;
 
   /**
-   * @member {Boolean} IsStratified
-   */
-  exports.prototype['IsStratified'] = undefined;
-
-  /**
-   * @member {module:model/Pagination} Pagination
-   */
-  exports.prototype['Pagination'] = undefined;
-
-  /**
+   * Defining the sample size, you can use percentage or a given number. \r\n            Using a percentage you can define the document number by a percentage. \r\n            This percentage will calculate the document number by using the available dataset document number. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 10% as a sampling size without stratified method, your sample size is 100.000 x 10% = 10.000
    * @member {Number} Percent
    */
   exports.prototype['Percent'] = undefined;
 
   /**
+   * Define your sample size by providing a simple integer. \r\n            E.g.: if your dataset contains 100.000 documents and you are using 3.000 as a sampling size without stratified method, your sample size is 3.000
    * @member {Integer} Size
    */
   exports.prototype['Size'] = undefined;
 
   /**
-   * @member {Boolean} IdsOnly
+   * Query returns only with the specified field(s)
+   * @member {Array.<String>} FieldList
    */
-  exports.prototype['IdsOnly'] = undefined;
+  exports.prototype['FieldList'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The Pagination model module.
    * @module model/Pagination
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -27,9 +27,6 @@
    * @class
    */
   var exports = function() {
-
-
-
 
 
   };
@@ -50,17 +47,8 @@ exports.prototype.typeName = 'Pagination';
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Offset')) {
-        obj['Offset'] = ApiClient.convertToType(data['Offset'], 'Integer');
-      }
       if (data.hasOwnProperty('Limit')) {
         obj['Limit'] = ApiClient.convertToType(data['Limit'], 'Integer');
-      }
-      if (data.hasOwnProperty('OrderDirection')) {
-        obj['OrderDirection'] = ApiClient.convertToType(data['OrderDirection'], 'String');
-      }
-      if (data.hasOwnProperty('OrderByField')) {
-        obj['OrderByField'] = ApiClient.convertToType(data['OrderByField'], 'String');
       }
     }
     return obj;
@@ -68,44 +56,13 @@ exports.prototype.typeName = 'Pagination';
 
 
   /**
-   * @member {Integer} Offset
-   */
-  exports.prototype['Offset'] = undefined;
-
-  /**
+   * How many element you want to get back in this request
    * @member {Integer} Limit
    */
   exports.prototype['Limit'] = undefined;
 
-  /**
-   * @member {module:model/Pagination.OrderDirectionEnum} OrderDirection
-   */
-  exports.prototype['OrderDirection'] = undefined;
-
-  /**
-   * @member {String} OrderByField
-   */
-  exports.prototype['OrderByField'] = undefined;
 
 
-  /**
-   * Allowed values for the <code>OrderDirection</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.OrderDirectionEnum = { 
-    /**
-     * value: Asc
-     * @const
-     */
-    ASC: "Asc",
-    
-    /**
-     * value: Desc
-     * @const
-     */
-    DESC: "Desc"
-  };
 
   return exports;
 }));

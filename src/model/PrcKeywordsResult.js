@@ -10,34 +10,36 @@
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.ModelObject = factory(root.SlambySdk.ApiClient);
+    root.SlambySdk.PrcKeywordsResult = factory(root.SlambySdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The ModelObject model module.
-   * @module model/ModelObject
-   * @version 0.14.0
+   * The PrcKeywordsResult model module.
+   * @module model/PrcKeywordsResult
+   * @version 1.0.0-rc
    */
 
   /**
-   * Constructs a new <code>ModelObject</code>.
-   * @alias module:model/ModelObject
+   * Constructs a new <code>PrcKeywordsResult</code>.
+   * @alias module:model/PrcKeywordsResult
    * @class
    */
   var exports = function() {
 
+
+
   };
 
-exports.prototype.typeName = 'ModelObject';
+exports.prototype.typeName = 'PrcKeywordsResult';
 
   /**
-   * Constructs a <code>ModelObject</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PrcKeywordsResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ModelObject} obj Optional instance to populate.
-   * @return {module:model/ModelObject} The populated <code>ModelObject</code> instance.
+   * @param {module:model/PrcKeywordsResult} obj Optional instance to populate.
+   * @return {module:model/PrcKeywordsResult} The populated <code>PrcKeywordsResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -46,10 +48,26 @@ exports.prototype.typeName = 'ModelObject';
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('Word')) {
+        obj['Word'] = ApiClient.convertToType(data['Word'], 'String');
+      }
+      if (data.hasOwnProperty('Score')) {
+        obj['Score'] = ApiClient.convertToType(data['Score'], 'Number');
+      }
     }
     return obj;
   }
 
+
+  /**
+   * @member {String} Word
+   */
+  exports.prototype['Word'] = undefined;
+
+  /**
+   * @member {Number} Score
+   */
+  exports.prototype['Score'] = undefined;
 
 
 

@@ -18,7 +18,7 @@
   /**
    * The ClassifierRecommendationResult model module.
    * @module model/ClassifierRecommendationResult
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
@@ -27,6 +27,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -58,17 +59,22 @@ exports.prototype.typeName = 'ClassifierRecommendationResult';
       if (data.hasOwnProperty('Tag')) {
         obj['Tag'] = Tag.constructFromObject(data['Tag']);
       }
+      if (data.hasOwnProperty('IsEmphasized')) {
+        obj['IsEmphasized'] = ApiClient.convertToType(data['IsEmphasized'], 'Boolean');
+      }
     }
     return obj;
   }
 
 
   /**
+   * The recommended tag id
    * @member {String} TagId
    */
   exports.prototype['TagId'] = undefined;
 
   /**
+   * The score that belongs to the tag id
    * @member {Number} Score
    */
   exports.prototype['Score'] = undefined;
@@ -77,6 +83,12 @@ exports.prototype.typeName = 'ClassifierRecommendationResult';
    * @member {module:model/Tag} Tag
    */
   exports.prototype['Tag'] = undefined;
+
+  /**
+   * If there was applied emphasizing by this tag
+   * @member {Boolean} IsEmphasized
+   */
+  exports.prototype['IsEmphasized'] = undefined;
 
 
 

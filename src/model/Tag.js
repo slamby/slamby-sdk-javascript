@@ -18,11 +18,12 @@
   /**
    * The Tag model module.
    * @module model/Tag
-   * @version 0.14.0
+   * @version 1.0.0-rc
    */
 
   /**
    * Constructs a new <code>Tag</code>.
+   * Tag object
    * @alias module:model/Tag
    * @class
    * @param id
@@ -70,21 +71,25 @@ exports.prototype.typeName = 'Tag';
 
 
   /**
+   * The identifier of the tag. It must be unique across the DataSet
    * @member {String} Id
    */
   exports.prototype['Id'] = undefined;
 
   /**
+   * \"Name of the tag
    * @member {String} Name
    */
   exports.prototype['Name'] = undefined;
 
   /**
+   * The identifier of the parent of the tag. It must be the id of an existing tag
    * @member {String} ParentId
    */
   exports.prototype['ParentId'] = undefined;
 
   /**
+   * Tag properties
    * @member {module:model/TagProperties} Properties
    */
   exports.prototype['Properties'] = undefined;

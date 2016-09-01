@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**level** | **Integer** |  | [optional] 
+**id** | **String** | Id of the Tag | [optional] 
+**name** | **String** | Name of the Tag | [optional] 
+**level** | **Integer** | Level of the Tag | [optional] 
 
 
 

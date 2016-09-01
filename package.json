@@ -1,6 +1,6 @@
 {
   "name": "slamby-sdk",
-  "version": "0.14.0",
+  "version": "1.0.0-rc",
   "description": "Slamby SDK",
   "main": "src/index.js",
   "scripts": {
