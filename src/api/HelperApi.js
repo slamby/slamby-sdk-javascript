@@ -18,7 +18,7 @@
   /**
    * Helper service.
    * @module api/HelperApi
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

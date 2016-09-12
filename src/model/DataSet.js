@@ -18,7 +18,7 @@
   /**
    * The DataSet model module.
    * @module model/DataSet
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

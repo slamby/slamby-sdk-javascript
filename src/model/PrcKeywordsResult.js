@@ -18,7 +18,7 @@
   /**
    * The PrcKeywordsResult model module.
    * @module model/PrcKeywordsResult
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

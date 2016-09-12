@@ -18,7 +18,7 @@
   /**
    * The TagsExportWordsSettings model module.
    * @module model/TagsExportWordsSettings
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

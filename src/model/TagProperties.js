@@ -18,7 +18,7 @@
   /**
    * The TagProperties model module.
    * @module model/TagProperties
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

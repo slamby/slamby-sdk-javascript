@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './Filter', './Weight'], factory);
+    define(['../ApiClient', './Weight'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Filter'), require('./Weight'));
+    module.exports = factory(require('../ApiClient'), require('./Weight'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.PrcRecommendationByIdRequest = factory(root.SlambySdk.ApiClient, root.SlambySdk.Filter, root.SlambySdk.Weight);
+    root.SlambySdk.PrcRecommendationByIdRequest = factory(root.SlambySdk.ApiClient, root.SlambySdk.Weight);
   }
-}(this, function(ApiClient, Filter, Weight) {
+}(this, function(ApiClient, Weight) {
   'use strict';
 
   /**
    * The PrcRecommendationByIdRequest model module.
    * @module model/PrcRecommendationByIdRequest
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**
@@ -26,14 +26,13 @@
    * @alias module:model/PrcRecommendationByIdRequest
    * @class
    * @param documentId
-   * @param tagId
    */
-  var exports = function(documentId, tagId) {
+  var exports = function(documentId) {
 
     this['DocumentId'] = documentId;
 
 
-    this['TagId'] = tagId;
+
 
 
   };
@@ -57,6 +56,9 @@ exports.prototype.typeName = 'PrcRecommendationByIdRequest';
       if (data.hasOwnProperty('DocumentId')) {
         obj['DocumentId'] = ApiClient.convertToType(data['DocumentId'], 'String');
       }
+      if (data.hasOwnProperty('Query')) {
+        obj['Query'] = ApiClient.convertToType(data['Query'], 'String');
+      }
       if (data.hasOwnProperty('Count')) {
         obj['Count'] = ApiClient.convertToType(data['Count'], 'Integer');
       }
@@ -65,9 +67,6 @@ exports.prototype.typeName = 'PrcRecommendationByIdRequest';
       }
       if (data.hasOwnProperty('TagId')) {
         obj['TagId'] = ApiClient.convertToType(data['TagId'], 'String');
-      }
-      if (data.hasOwnProperty('Filter')) {
-        obj['Filter'] = Filter.constructFromObject(data['Filter']);
       }
       if (data.hasOwnProperty('Weights')) {
         obj['Weights'] = ApiClient.convertToType(data['Weights'], [Weight]);
@@ -83,6 +82,12 @@ exports.prototype.typeName = 'PrcRecommendationByIdRequest';
   exports.prototype['DocumentId'] = undefined;
 
   /**
+   * Set here the filters. The value is the query string you want to apply. \r\n            Can be BOOL expressions. You can use these: AND, OR, NOT. \r\n            For example: 'searchforthis AND NOT butnotthis'. \r\n            Also you can use wildcards. For example: 'exampl*'. \r\n            If you want to search in a specified field, than do this: 'title:searchthisinthetitle'
+   * @member {String} Query
+   */
+  exports.prototype['Query'] = undefined;
+
+  /**
    * @member {Integer} Count
    */
   exports.prototype['Count'] = undefined;
@@ -96,11 +101,6 @@ exports.prototype.typeName = 'PrcRecommendationByIdRequest';
    * @member {String} TagId
    */
   exports.prototype['TagId'] = undefined;
-
-  /**
-   * @member {module:model/Filter} Filter
-   */
-  exports.prototype['Filter'] = undefined;
 
   /**
    * @member {Array.<module:model/Weight>} Weights

@@ -18,7 +18,7 @@
   /**
    * The ClassifierRecommendationResult model module.
    * @module model/ClassifierRecommendationResult
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The PrcIndexSettings model module.
    * @module model/PrcIndexSettings
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

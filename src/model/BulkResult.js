@@ -18,7 +18,7 @@
   /**
    * The BulkResult model module.
    * @module model/BulkResult
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

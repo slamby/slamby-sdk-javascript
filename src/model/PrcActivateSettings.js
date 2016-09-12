@@ -18,7 +18,7 @@
   /**
    * The PrcActivateSettings model module.
    * @module model/PrcActivateSettings
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

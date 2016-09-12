@@ -18,7 +18,7 @@
   /**
    * The PrcRecommendationRequest model module.
    * @module model/PrcRecommendationRequest
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**
@@ -26,14 +26,13 @@
    * @alias module:model/PrcRecommendationRequest
    * @class
    * @param text
-   * @param tagId
    */
-  var exports = function(text, tagId) {
+  var exports = function(text) {
 
     this['Text'] = text;
 
 
-    this['TagId'] = tagId;
+
 
 
   };
@@ -57,6 +56,9 @@ exports.prototype.typeName = 'PrcRecommendationRequest';
       if (data.hasOwnProperty('Text')) {
         obj['Text'] = ApiClient.convertToType(data['Text'], 'String');
       }
+      if (data.hasOwnProperty('Filter')) {
+        obj['Filter'] = Filter.constructFromObject(data['Filter']);
+      }
       if (data.hasOwnProperty('Count')) {
         obj['Count'] = ApiClient.convertToType(data['Count'], 'Integer');
       }
@@ -65,9 +67,6 @@ exports.prototype.typeName = 'PrcRecommendationRequest';
       }
       if (data.hasOwnProperty('TagId')) {
         obj['TagId'] = ApiClient.convertToType(data['TagId'], 'String');
-      }
-      if (data.hasOwnProperty('Filter')) {
-        obj['Filter'] = Filter.constructFromObject(data['Filter']);
       }
       if (data.hasOwnProperty('Weights')) {
         obj['Weights'] = ApiClient.convertToType(data['Weights'], [Weight]);
@@ -83,6 +82,11 @@ exports.prototype.typeName = 'PrcRecommendationRequest';
   exports.prototype['Text'] = undefined;
 
   /**
+   * @member {module:model/Filter} Filter
+   */
+  exports.prototype['Filter'] = undefined;
+
+  /**
    * @member {Integer} Count
    */
   exports.prototype['Count'] = undefined;
@@ -96,11 +100,6 @@ exports.prototype.typeName = 'PrcRecommendationRequest';
    * @member {String} TagId
    */
   exports.prototype['TagId'] = undefined;
-
-  /**
-   * @member {module:model/Filter} Filter
-   */
-  exports.prototype['Filter'] = undefined;
 
   /**
    * @member {Array.<module:model/Weight>} Weights

@@ -18,7 +18,7 @@
   /**
    * DataSet service.
    * @module api/DataSetApi
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

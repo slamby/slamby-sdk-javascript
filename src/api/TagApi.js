@@ -18,7 +18,7 @@
   /**
    * Tag service.
    * @module api/TagApi
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

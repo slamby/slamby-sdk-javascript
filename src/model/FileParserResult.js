@@ -18,7 +18,7 @@
   /**
    * The FileParserResult model module.
    * @module model/FileParserResult
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

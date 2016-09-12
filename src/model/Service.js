@@ -18,7 +18,7 @@
   /**
    * The Service model module.
    * @module model/Service
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The DocumentBulkSettings model module.
    * @module model/DocumentBulkSettings
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**

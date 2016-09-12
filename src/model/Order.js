@@ -18,7 +18,7 @@
   /**
    * The Order model module.
    * @module model/Order
-   * @version 1.0.0-rc1
+   * @version 1.0.0
    */
 
   /**
