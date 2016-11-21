@@ -1,17 +1,17 @@
-# SlambySdk.HelperApi
+# SlambySdk.MaintenanceApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fileParser**](HelperApi.md#fileParser) | **POST** /api/Helper/FileParser | 
+[**changeSecret**](MaintenanceApi.md#changeSecret) | **POST** /api/Maintenance/ChangeSecret | 
 
 
 
 
-<a name="fileParser"></a>
-# **fileParser**
-> FileParserResult fileParser(opts)
+<a name="changeSecret"></a>
+# **changeSecret**
+> changeSecret(opts)
 
 
 
@@ -20,14 +20,14 @@ Method | HTTP request | Description
 var SlambySdk = require('slamby-sdk');
 
 
-var apiInstance = new SlambySdk.HelperApi();
+var apiInstance = new SlambySdk.MaintenanceApi();
 
 var opts = { 
-  'fileParser': new SlambySdk.FileParser() // FileParser | 
+  'secret': new SlambySdk.ChangeSecret() // ChangeSecret | 
 };
 
-apiInstance.fileParser(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+apiInstance.changeSecret(opts).then(function() {
+  console.log('API called successfully.');
 }, function(error) {
   console.error(error);
 });
@@ -39,12 +39,12 @@ apiInstance.fileParser(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileParser** | [**FileParser**](FileParser.md)|  | [optional] 
+ **secret** | [**ChangeSecret**](ChangeSecret.md)|  | [optional] 
 
 
 ### Return type
 
-[**FileParserResult**](FileParserResult.md)
+null (empty response body)
 
 ### Authorization
 

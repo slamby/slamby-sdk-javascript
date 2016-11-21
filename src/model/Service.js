@@ -18,7 +18,7 @@
   /**
    * The Service model module.
    * @module model/Service
-   * @version 1.0.0
+   * @version 1.2.0
    */
 
   /**
@@ -98,7 +98,7 @@ exports.prototype.typeName = 'Service';
   exports.prototype['Name'] = undefined;
 
   /**
-   * Alias name of the service. Services can be accessed via this name.\r\n            Alias can be modified. It is unique amongst the services.
+   * Alias name of the service. Services can be accessed via this name.\r\nAlias can be modified. It is unique amongst the services.
    * @member {String} Alias
    */
   exports.prototype['Alias'] = undefined;
@@ -110,13 +110,13 @@ exports.prototype.typeName = 'Service';
   exports.prototype['Description'] = undefined;
 
   /**
-   * New - the service was created | \r\n            Busy - the service is working on something (e.g.: during the Prepare) | \r\n            Prepared - the service was prepared so you can activate it to use | \r\n            Active - the service so you can use it
+   * New - the service was created | \r\nBusy - the service is working on something (e.g.: during the Prepare) | \r\nPrepared - the service was prepared so you can activate it to use | \r\nActive - the service so you can use it
    * @member {module:model/Service.StatusEnum} Status
    */
   exports.prototype['Status'] = undefined;
 
   /**
-   * Type of the service.\r\n            Currently supported types:\r\n            - Classifier\r\n            - Prc
+   * Type of the service.\r\nCurrently supported types:\r\n- Classifier\r\n- Prc
    * @member {module:model/Service.TypeEnum} Type
    */
   exports.prototype['Type'] = undefined;

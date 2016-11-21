@@ -10,35 +10,36 @@
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.PrcActivateSettings = factory(root.SlambySdk.ApiClient);
+    root.SlambySdk.ChangeLicense = factory(root.SlambySdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The PrcActivateSettings model module.
-   * @module model/PrcActivateSettings
+   * The ChangeLicense model module.
+   * @module model/ChangeLicense
    * @version 1.2.0
    */
 
   /**
-   * Constructs a new <code>PrcActivateSettings</code>.
-   * @alias module:model/PrcActivateSettings
+   * Constructs a new <code>ChangeLicense</code>.
+   * @alias module:model/ChangeLicense
    * @class
+   * @param license
    */
-  var exports = function() {
+  var exports = function(license) {
 
-
+    this['License'] = license;
   };
 
-exports.prototype.typeName = 'PrcActivateSettings';
+exports.prototype.typeName = 'ChangeLicense';
 
   /**
-   * Constructs a <code>PrcActivateSettings</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ChangeLicense</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PrcActivateSettings} obj Optional instance to populate.
-   * @return {module:model/PrcActivateSettings} The populated <code>PrcActivateSettings</code> instance.
+   * @param {module:model/ChangeLicense} obj Optional instance to populate.
+   * @return {module:model/ChangeLicense} The populated <code>ChangeLicense</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -47,8 +48,8 @@ exports.prototype.typeName = 'PrcActivateSettings';
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('FieldsForRecommendation')) {
-        obj['FieldsForRecommendation'] = ApiClient.convertToType(data['FieldsForRecommendation'], ['String']);
+      if (data.hasOwnProperty('License')) {
+        obj['License'] = ApiClient.convertToType(data['License'], 'String');
       }
     }
     return obj;
@@ -56,9 +57,9 @@ exports.prototype.typeName = 'PrcActivateSettings';
 
 
   /**
-   * @member {Array.<String>} FieldsForRecommendation
+   * @member {String} License
    */
-  exports.prototype['FieldsForRecommendation'] = undefined;
+  exports.prototype['License'] = undefined;
 
 
 

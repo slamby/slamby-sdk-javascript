@@ -18,7 +18,7 @@
   /**
    * The ExportDictionariesSettings model module.
    * @module model/ExportDictionariesSettings
-   * @version 1.0.0
+   * @version 1.2.0
    */
 
   /**

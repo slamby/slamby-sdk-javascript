@@ -1,29 +1,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/FileParser', '../model/ErrorsModel', '../model/FileParserResult'], factory);
+    define(['../ApiClient', '../model/ChangeSecret', '../model/ErrorsModel'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/FileParser'), require('../model/ErrorsModel'), require('../model/FileParserResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/ChangeSecret'), require('../model/ErrorsModel'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.HelperApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.FileParser, root.SlambySdk.ErrorsModel, root.SlambySdk.FileParserResult);
+    root.SlambySdk.MaintenanceApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.ChangeSecret, root.SlambySdk.ErrorsModel);
   }
-}(this, function(ApiClient, FileParser, ErrorsModel, FileParserResult) {
+}(this, function(ApiClient, ChangeSecret, ErrorsModel) {
   'use strict';
 
   /**
-   * Helper service.
-   * @module api/HelperApi
+   * Maintenance service.
+   * @module api/MaintenanceApi
    * @version 1.2.0
    */
 
   /**
-   * Constructs a new HelperApi. 
-   * @alias module:api/HelperApi
+   * Constructs a new MaintenanceApi. 
+   * @alias module:api/MaintenanceApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use, default to {@link module:ApiClient#instance}
    * if unspecified.
@@ -35,12 +35,11 @@
 
     /**
      * @param {Object} opts Optional parameters
-     * @param {module:model/FileParser} opts.fileParser 
-     * data is of type: {module:model/FileParserResult}
+     * @param {module:model/ChangeSecret} opts.secret 
      */
-    this.fileParser = function(opts) {
+    this.changeSecret = function(opts) {
       opts = opts || {};
-      var postBody = opts['fileParser'];
+      var postBody = opts['secret'];
 
 
       var pathParams = {
@@ -55,10 +54,10 @@
       var authNames = [];
       var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
-      var returnType = FileParserResult;
+      var returnType = null;
 
       return this.apiClient.callApi(
-        '/api/Helper/FileParser', 'POST',
+        '/api/Maintenance/ChangeSecret', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

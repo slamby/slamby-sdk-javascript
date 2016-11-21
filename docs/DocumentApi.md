@@ -60,7 +60,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 
@@ -107,7 +107,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 
@@ -154,7 +154,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 
@@ -296,7 +296,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 
@@ -343,7 +343,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 
@@ -390,7 +390,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 
@@ -440,7 +440,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/json-patch+json
  - **Accept**: Not defined
 
 

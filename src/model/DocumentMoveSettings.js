@@ -18,7 +18,7 @@
   /**
    * The DocumentMoveSettings model module.
    * @module model/DocumentMoveSettings
-   * @version 1.0.0
+   * @version 1.2.0
    */
 
   /**

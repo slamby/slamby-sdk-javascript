@@ -18,7 +18,7 @@
   /**
    * The FileParser model module.
    * @module model/FileParser
-   * @version 1.0.0
+   * @version 1.2.0
    */
 
   /**

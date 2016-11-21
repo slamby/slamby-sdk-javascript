@@ -18,7 +18,7 @@
   /**
    * ClassifierService service.
    * @module api/ClassifierServiceApi
-   * @version 1.0.0
+   * @version 1.2.0
    */
 
   /**
@@ -60,7 +60,7 @@
       };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
       var returnType = Process;
 
@@ -134,7 +134,7 @@
       };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
       var returnType = Process;
 
@@ -209,7 +209,7 @@
       };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
       var returnType = Process;
 
@@ -248,7 +248,7 @@
       };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
       var returnType = [ClassifierRecommendationResult];
 

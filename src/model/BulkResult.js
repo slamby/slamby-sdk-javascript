@@ -18,12 +18,12 @@
   /**
    * The BulkResult model module.
    * @module model/BulkResult
-   * @version 1.0.0
+   * @version 1.2.0
    */
 
   /**
    * Constructs a new <code>BulkResult</code>.
-   * \&quot;Result of a bulk save element.\r\n            If the save was successful then the StatusCode is 2XX. \r\n            If there was a problem, the StatusCode is not 2XX, and the error message is in the Error field.
+   * \&quot;Result of a bulk save element.\r\nIf the save was successful then the StatusCode is 2XX. \r\nIf there was a problem, the StatusCode is not 2XX, and the error message is in the Error field.
    * @alias module:model/BulkResult
    * @class
    */
