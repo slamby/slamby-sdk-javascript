@@ -18,7 +18,7 @@
   /**
    * The Process model module.
    * @module model/Process
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -246,7 +246,31 @@ exports.prototype.typeName = 'Process';
      * value: PrcIndexPartial
      * @const
      */
-    PRCINDEXPARTIAL: "PrcIndexPartial"
+    PRCINDEXPARTIAL: "PrcIndexPartial",
+    
+    /**
+     * value: DocumentsCopy
+     * @const
+     */
+    DOCUMENTSCOPY: "DocumentsCopy",
+    
+    /**
+     * value: DocumentsMove
+     * @const
+     */
+    DOCUMENTSMOVE: "DocumentsMove",
+    
+    /**
+     * value: SearchPrepare
+     * @const
+     */
+    SEARCHPREPARE: "SearchPrepare",
+    
+    /**
+     * value: SearchActivate
+     * @const
+     */
+    SEARCHACTIVATE: "SearchActivate"
   };
 
   return exports;

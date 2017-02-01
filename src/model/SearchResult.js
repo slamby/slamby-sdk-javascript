@@ -10,20 +10,21 @@
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.PrcRecommendationResult = factory(root.SlambySdk.ApiClient);
+    root.SlambySdk.SearchResult = factory(root.SlambySdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The PrcRecommendationResult model module.
-   * @module model/PrcRecommendationResult
+   * The SearchResult model module.
+   * @module model/SearchResult
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>PrcRecommendationResult</code>.
-   * @alias module:model/PrcRecommendationResult
+   * Constructs a new <code>SearchResult</code>.
+   * A search result, actually a document itself with a relevance score
+   * @alias module:model/SearchResult
    * @class
    */
   var exports = function() {
@@ -33,14 +34,14 @@
 
   };
 
-exports.prototype.typeName = 'PrcRecommendationResult';
+exports.prototype.typeName = 'SearchResult';
 
   /**
-   * Constructs a <code>PrcRecommendationResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SearchResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PrcRecommendationResult} obj Optional instance to populate.
-   * @return {module:model/PrcRecommendationResult} The populated <code>PrcRecommendationResult</code> instance.
+   * @param {module:model/SearchResult} obj Optional instance to populate.
+   * @return {module:model/SearchResult} The populated <code>SearchResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -64,16 +65,19 @@ exports.prototype.typeName = 'PrcRecommendationResult';
 
 
   /**
+   * The ID of the document
    * @member {String} DocumentId
    */
   exports.prototype['DocumentId'] = undefined;
 
   /**
+   * The relevance score
    * @member {Number} Score
    */
   exports.prototype['Score'] = undefined;
 
   /**
+   * The document itself but ONLY the FIELDS that you request with the RESPONSEFIELDLIST parameter
    * @member {Object} Document
    */
   exports.prototype['Document'] = undefined;

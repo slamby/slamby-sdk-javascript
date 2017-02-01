@@ -1,24 +1,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/BulkResults', '../model/ErrorsModel', '../model/DocumentBulkSettings', '../model/DocumentCopySettings', '../model/PaginatedListObject', '../model/DocumentFilterSettings', '../model/DocumentSampleSettings', '../model/DocumentMoveSettings'], factory);
+    define(['../ApiClient', '../model/BulkResults', '../model/ErrorsModel', '../model/DocumentBulkSettings', '../model/DocumentCopySettings', '../model/Process', '../model/PaginatedListObject', '../model/DocumentFilterSettings', '../model/DocumentSampleSettings', '../model/DocumentMoveSettings'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BulkResults'), require('../model/ErrorsModel'), require('../model/DocumentBulkSettings'), require('../model/DocumentCopySettings'), require('../model/PaginatedListObject'), require('../model/DocumentFilterSettings'), require('../model/DocumentSampleSettings'), require('../model/DocumentMoveSettings'));
+    module.exports = factory(require('../ApiClient'), require('../model/BulkResults'), require('../model/ErrorsModel'), require('../model/DocumentBulkSettings'), require('../model/DocumentCopySettings'), require('../model/Process'), require('../model/PaginatedListObject'), require('../model/DocumentFilterSettings'), require('../model/DocumentSampleSettings'), require('../model/DocumentMoveSettings'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.DocumentApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.BulkResults, root.SlambySdk.ErrorsModel, root.SlambySdk.DocumentBulkSettings, root.SlambySdk.DocumentCopySettings, root.SlambySdk.PaginatedListObject, root.SlambySdk.DocumentFilterSettings, root.SlambySdk.DocumentSampleSettings, root.SlambySdk.DocumentMoveSettings);
+    root.SlambySdk.DocumentApi = factory(root.SlambySdk.ApiClient, root.SlambySdk.BulkResults, root.SlambySdk.ErrorsModel, root.SlambySdk.DocumentBulkSettings, root.SlambySdk.DocumentCopySettings, root.SlambySdk.Process, root.SlambySdk.PaginatedListObject, root.SlambySdk.DocumentFilterSettings, root.SlambySdk.DocumentSampleSettings, root.SlambySdk.DocumentMoveSettings);
   }
-}(this, function(ApiClient, BulkResults, ErrorsModel, DocumentBulkSettings, DocumentCopySettings, PaginatedListObject, DocumentFilterSettings, DocumentSampleSettings, DocumentMoveSettings) {
+}(this, function(ApiClient, BulkResults, ErrorsModel, DocumentBulkSettings, DocumentCopySettings, Process, PaginatedListObject, DocumentFilterSettings, DocumentSampleSettings, DocumentMoveSettings) {
   'use strict';
 
   /**
    * Document service.
    * @module api/DocumentApi
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -68,6 +68,7 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/DocumentCopySettings} opts.copySettings 
+     * data is of type: {module:model/Process}
      */
     this.copyDocuments = function(opts) {
       opts = opts || {};
@@ -86,7 +87,7 @@
       var authNames = [];
       var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
-      var returnType = null;
+      var returnType = Process;
 
       return this.apiClient.callApi(
         '/api/Documents/Copy', 'POST',
@@ -272,6 +273,7 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/DocumentMoveSettings} opts.moveSettings 
+     * data is of type: {module:model/Process}
      */
     this.moveDocuments = function(opts) {
       opts = opts || {};
@@ -290,7 +292,7 @@
       var authNames = [];
       var contentTypes = ['application/json', 'text/json', 'application/json-patch+json'];
       var accepts = [];
-      var returnType = null;
+      var returnType = Process;
 
       return this.apiClient.callApi(
         '/api/Documents/Move', 'POST',

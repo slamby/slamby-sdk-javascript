@@ -1,12 +1,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['./ApiClient', './model/BulkResult', './model/BulkResults', './model/ChangeLicense', './model/ChangeSecret', './model/ClassifierActivateSettings', './model/ClassifierPrepareSettings', './model/ClassifierRecommendationRequest', './model/ClassifierRecommendationResult', './model/ClassifierService', './model/CompressSettings', './model/DataSet', './model/DataSetStats', './model/DataSetUpdate', './model/DocumentBulkSettings', './model/DocumentCopySettings', './model/DocumentFilterSettings', './model/DocumentMoveSettings', './model/DocumentSampleSettings', './model/ErrorsModel', './model/ExportDictionariesSettings', './model/FileParser', './model/FileParserResult', './model/Filter', './model/License', './model/Order', './model/PaginatedListObject', './model/Pagination', './model/PathItem', './model/PrcActivateSettings', './model/PrcIndexSettings', './model/PrcKeywordsRequest', './model/PrcKeywordsResult', './model/PrcPrepareSettings', './model/PrcRecommendationByIdRequest', './model/PrcRecommendationRequest', './model/PrcRecommendationResult', './model/PrcService', './model/Process', './model/Service', './model/Status', './model/Tag', './model/TagBulkSettings', './model/TagProperties', './model/TagsExportWordsSettings', './model/Weight', './api/ClassifierServiceApi', './api/DataSetApi', './api/DocumentApi', './api/HelperApi', './api/LicenseApi', './api/MaintenanceApi', './api/PrcServiceApi', './api/ProcessApi', './api/ServiceApi', './api/StatusApi', './api/TagApi'], factory);
+    define(['./ApiClient', './model/Action', './model/AutoCompleteResult', './model/AutoCompleteSettings', './model/BulkResult', './model/BulkResults', './model/ChangeLicense', './model/ChangeSecret', './model/ClassifierActivateSettings', './model/ClassifierPrepareSettings', './model/ClassifierRecommendationRequest', './model/ClassifierRecommendationResult', './model/ClassifierService', './model/ClassifierSettings', './model/CompressSettings', './model/DataSet', './model/DataSetStats', './model/DataSetUpdate', './model/DocumentBulkSettings', './model/DocumentCopySettings', './model/DocumentFilterSettings', './model/DocumentMoveSettings', './model/DocumentSampleSettings', './model/ErrorsModel', './model/ExportDictionariesSettings', './model/FileParser', './model/FileParserResult', './model/Filter', './model/License', './model/Order', './model/PaginatedListObject', './model/Pagination', './model/PathItem', './model/PrcActivateSettings', './model/PrcIndexSettings', './model/PrcKeywordsRequest', './model/PrcKeywordsResult', './model/PrcPrepareSettings', './model/PrcRecommendationByIdRequest', './model/PrcRecommendationRequest', './model/PrcRecommendationResult', './model/PrcService', './model/Process', './model/SearchActivateSettings', './model/SearchClassifierRecommendationResult', './model/SearchPrepareSettings', './model/SearchRequest', './model/SearchResult', './model/SearchResultWrapper', './model/SearchService', './model/SearchSettings', './model/Service', './model/Statistics', './model/StatisticsWrapper', './model/Status', './model/Tag', './model/TagBulkSettings', './model/TagProperties', './model/TagsExportWordsSettings', './model/Weight', './api/ClassifierServiceApi', './api/DataSetApi', './api/DocumentApi', './api/HelperApi', './api/LicenseApi', './api/MaintenanceApi', './api/PrcServiceApi', './api/ProcessApi', './api/SearchServiceApi', './api/ServiceApi', './api/StatisticsApi', './api/StatusApi', './api/TagApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BulkResult'), require('./model/BulkResults'), require('./model/ChangeLicense'), require('./model/ChangeSecret'), require('./model/ClassifierActivateSettings'), require('./model/ClassifierPrepareSettings'), require('./model/ClassifierRecommendationRequest'), require('./model/ClassifierRecommendationResult'), require('./model/ClassifierService'), require('./model/CompressSettings'), require('./model/DataSet'), require('./model/DataSetStats'), require('./model/DataSetUpdate'), require('./model/DocumentBulkSettings'), require('./model/DocumentCopySettings'), require('./model/DocumentFilterSettings'), require('./model/DocumentMoveSettings'), require('./model/DocumentSampleSettings'), require('./model/ErrorsModel'), require('./model/ExportDictionariesSettings'), require('./model/FileParser'), require('./model/FileParserResult'), require('./model/Filter'), require('./model/License'), require('./model/Order'), require('./model/PaginatedListObject'), require('./model/Pagination'), require('./model/PathItem'), require('./model/PrcActivateSettings'), require('./model/PrcIndexSettings'), require('./model/PrcKeywordsRequest'), require('./model/PrcKeywordsResult'), require('./model/PrcPrepareSettings'), require('./model/PrcRecommendationByIdRequest'), require('./model/PrcRecommendationRequest'), require('./model/PrcRecommendationResult'), require('./model/PrcService'), require('./model/Process'), require('./model/Service'), require('./model/Status'), require('./model/Tag'), require('./model/TagBulkSettings'), require('./model/TagProperties'), require('./model/TagsExportWordsSettings'), require('./model/Weight'), require('./api/ClassifierServiceApi'), require('./api/DataSetApi'), require('./api/DocumentApi'), require('./api/HelperApi'), require('./api/LicenseApi'), require('./api/MaintenanceApi'), require('./api/PrcServiceApi'), require('./api/ProcessApi'), require('./api/ServiceApi'), require('./api/StatusApi'), require('./api/TagApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Action'), require('./model/AutoCompleteResult'), require('./model/AutoCompleteSettings'), require('./model/BulkResult'), require('./model/BulkResults'), require('./model/ChangeLicense'), require('./model/ChangeSecret'), require('./model/ClassifierActivateSettings'), require('./model/ClassifierPrepareSettings'), require('./model/ClassifierRecommendationRequest'), require('./model/ClassifierRecommendationResult'), require('./model/ClassifierService'), require('./model/ClassifierSettings'), require('./model/CompressSettings'), require('./model/DataSet'), require('./model/DataSetStats'), require('./model/DataSetUpdate'), require('./model/DocumentBulkSettings'), require('./model/DocumentCopySettings'), require('./model/DocumentFilterSettings'), require('./model/DocumentMoveSettings'), require('./model/DocumentSampleSettings'), require('./model/ErrorsModel'), require('./model/ExportDictionariesSettings'), require('./model/FileParser'), require('./model/FileParserResult'), require('./model/Filter'), require('./model/License'), require('./model/Order'), require('./model/PaginatedListObject'), require('./model/Pagination'), require('./model/PathItem'), require('./model/PrcActivateSettings'), require('./model/PrcIndexSettings'), require('./model/PrcKeywordsRequest'), require('./model/PrcKeywordsResult'), require('./model/PrcPrepareSettings'), require('./model/PrcRecommendationByIdRequest'), require('./model/PrcRecommendationRequest'), require('./model/PrcRecommendationResult'), require('./model/PrcService'), require('./model/Process'), require('./model/SearchActivateSettings'), require('./model/SearchClassifierRecommendationResult'), require('./model/SearchPrepareSettings'), require('./model/SearchRequest'), require('./model/SearchResult'), require('./model/SearchResultWrapper'), require('./model/SearchService'), require('./model/SearchSettings'), require('./model/Service'), require('./model/Statistics'), require('./model/StatisticsWrapper'), require('./model/Status'), require('./model/Tag'), require('./model/TagBulkSettings'), require('./model/TagProperties'), require('./model/TagsExportWordsSettings'), require('./model/Weight'), require('./api/ClassifierServiceApi'), require('./api/DataSetApi'), require('./api/DocumentApi'), require('./api/HelperApi'), require('./api/LicenseApi'), require('./api/MaintenanceApi'), require('./api/PrcServiceApi'), require('./api/ProcessApi'), require('./api/SearchServiceApi'), require('./api/ServiceApi'), require('./api/StatisticsApi'), require('./api/StatusApi'), require('./api/TagApi'));
   }
-}(function(ApiClient, BulkResult, BulkResults, ChangeLicense, ChangeSecret, ClassifierActivateSettings, ClassifierPrepareSettings, ClassifierRecommendationRequest, ClassifierRecommendationResult, ClassifierService, CompressSettings, DataSet, DataSetStats, DataSetUpdate, DocumentBulkSettings, DocumentCopySettings, DocumentFilterSettings, DocumentMoveSettings, DocumentSampleSettings, ErrorsModel, ExportDictionariesSettings, FileParser, FileParserResult, Filter, License, Order, PaginatedListObject, Pagination, PathItem, PrcActivateSettings, PrcIndexSettings, PrcKeywordsRequest, PrcKeywordsResult, PrcPrepareSettings, PrcRecommendationByIdRequest, PrcRecommendationRequest, PrcRecommendationResult, PrcService, Process, Service, Status, Tag, TagBulkSettings, TagProperties, TagsExportWordsSettings, Weight, ClassifierServiceApi, DataSetApi, DocumentApi, HelperApi, LicenseApi, MaintenanceApi, PrcServiceApi, ProcessApi, ServiceApi, StatusApi, TagApi) {
+}(function(ApiClient, Action, AutoCompleteResult, AutoCompleteSettings, BulkResult, BulkResults, ChangeLicense, ChangeSecret, ClassifierActivateSettings, ClassifierPrepareSettings, ClassifierRecommendationRequest, ClassifierRecommendationResult, ClassifierService, ClassifierSettings, CompressSettings, DataSet, DataSetStats, DataSetUpdate, DocumentBulkSettings, DocumentCopySettings, DocumentFilterSettings, DocumentMoveSettings, DocumentSampleSettings, ErrorsModel, ExportDictionariesSettings, FileParser, FileParserResult, Filter, License, Order, PaginatedListObject, Pagination, PathItem, PrcActivateSettings, PrcIndexSettings, PrcKeywordsRequest, PrcKeywordsResult, PrcPrepareSettings, PrcRecommendationByIdRequest, PrcRecommendationRequest, PrcRecommendationResult, PrcService, Process, SearchActivateSettings, SearchClassifierRecommendationResult, SearchPrepareSettings, SearchRequest, SearchResult, SearchResultWrapper, SearchService, SearchSettings, Service, Statistics, StatisticsWrapper, Status, Tag, TagBulkSettings, TagProperties, TagsExportWordsSettings, Weight, ClassifierServiceApi, DataSetApi, DocumentApi, HelperApi, LicenseApi, MaintenanceApi, PrcServiceApi, ProcessApi, SearchServiceApi, ServiceApi, StatisticsApi, StatusApi, TagApi) {
   'use strict';
 
   /**
@@ -38,7 +38,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.2.0
+   * @version 1.5.0
    */
   var exports = {
     /**
@@ -46,6 +46,21 @@
      * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
+    /**
+     * The Action model constructor.
+     * @property {module:model/Action}
+     */
+    Action: Action,
+    /**
+     * The AutoCompleteResult model constructor.
+     * @property {module:model/AutoCompleteResult}
+     */
+    AutoCompleteResult: AutoCompleteResult,
+    /**
+     * The AutoCompleteSettings model constructor.
+     * @property {module:model/AutoCompleteSettings}
+     */
+    AutoCompleteSettings: AutoCompleteSettings,
     /**
      * The BulkResult model constructor.
      * @property {module:model/BulkResult}
@@ -91,6 +106,11 @@
      * @property {module:model/ClassifierService}
      */
     ClassifierService: ClassifierService,
+    /**
+     * The ClassifierSettings model constructor.
+     * @property {module:model/ClassifierSettings}
+     */
+    ClassifierSettings: ClassifierSettings,
     /**
      * The CompressSettings model constructor.
      * @property {module:model/CompressSettings}
@@ -237,10 +257,60 @@
      */
     Process: Process,
     /**
+     * The SearchActivateSettings model constructor.
+     * @property {module:model/SearchActivateSettings}
+     */
+    SearchActivateSettings: SearchActivateSettings,
+    /**
+     * The SearchClassifierRecommendationResult model constructor.
+     * @property {module:model/SearchClassifierRecommendationResult}
+     */
+    SearchClassifierRecommendationResult: SearchClassifierRecommendationResult,
+    /**
+     * The SearchPrepareSettings model constructor.
+     * @property {module:model/SearchPrepareSettings}
+     */
+    SearchPrepareSettings: SearchPrepareSettings,
+    /**
+     * The SearchRequest model constructor.
+     * @property {module:model/SearchRequest}
+     */
+    SearchRequest: SearchRequest,
+    /**
+     * The SearchResult model constructor.
+     * @property {module:model/SearchResult}
+     */
+    SearchResult: SearchResult,
+    /**
+     * The SearchResultWrapper model constructor.
+     * @property {module:model/SearchResultWrapper}
+     */
+    SearchResultWrapper: SearchResultWrapper,
+    /**
+     * The SearchService model constructor.
+     * @property {module:model/SearchService}
+     */
+    SearchService: SearchService,
+    /**
+     * The SearchSettings model constructor.
+     * @property {module:model/SearchSettings}
+     */
+    SearchSettings: SearchSettings,
+    /**
      * The Service model constructor.
      * @property {module:model/Service}
      */
     Service: Service,
+    /**
+     * The Statistics model constructor.
+     * @property {module:model/Statistics}
+     */
+    Statistics: Statistics,
+    /**
+     * The StatisticsWrapper model constructor.
+     * @property {module:model/StatisticsWrapper}
+     */
+    StatisticsWrapper: StatisticsWrapper,
     /**
      * The Status model constructor.
      * @property {module:model/Status}
@@ -312,10 +382,20 @@
      */
     ProcessApi: ProcessApi,
     /**
+     * The SearchServiceApi service constructor.
+     * @property {module:api/SearchServiceApi}
+     */
+    SearchServiceApi: SearchServiceApi,
+    /**
      * The ServiceApi service constructor.
      * @property {module:api/ServiceApi}
      */
     ServiceApi: ServiceApi,
+    /**
+     * The StatisticsApi service constructor.
+     * @property {module:api/StatisticsApi}
+     */
+    StatisticsApi: StatisticsApi,
     /**
      * The StatusApi service constructor.
      * @property {module:api/StatusApi}

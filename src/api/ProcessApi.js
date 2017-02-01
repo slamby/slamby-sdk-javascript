@@ -18,7 +18,7 @@
   /**
    * Process service.
    * @module api/ProcessApi
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -107,6 +107,7 @@
     /**
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.allStatus 
+     * @param {Boolean} opts.allTime 
      * data is of type: {Array.<module:model/Process>}
      */
     this.getProcesses = function(opts) {
@@ -117,7 +118,8 @@
       var pathParams = {
       };
       var queryParams = {
-        'allStatus': opts['allStatus']
+        'allStatus': opts['allStatus'],
+        'allTime': opts['allTime']
       };
       var headerParams = {
       };

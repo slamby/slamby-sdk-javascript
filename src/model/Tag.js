@@ -18,7 +18,7 @@
   /**
    * The Tag model module.
    * @module model/Tag
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**

@@ -1,30 +1,30 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', './ClassifierActivateSettings', './ClassifierPrepareSettings'], factory);
+    define(['../ApiClient', './SearchActivateSettings', './SearchPrepareSettings'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ClassifierActivateSettings'), require('./ClassifierPrepareSettings'));
+    module.exports = factory(require('../ApiClient'), require('./SearchActivateSettings'), require('./SearchPrepareSettings'));
   } else {
     // Browser globals (root is window)
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.ClassifierService = factory(root.SlambySdk.ApiClient, root.SlambySdk.ClassifierActivateSettings, root.SlambySdk.ClassifierPrepareSettings);
+    root.SlambySdk.SearchService = factory(root.SlambySdk.ApiClient, root.SlambySdk.SearchActivateSettings, root.SlambySdk.SearchPrepareSettings);
   }
-}(this, function(ApiClient, ClassifierActivateSettings, ClassifierPrepareSettings) {
+}(this, function(ApiClient, SearchActivateSettings, SearchPrepareSettings) {
   'use strict';
 
   /**
-   * The ClassifierService model module.
-   * @module model/ClassifierService
+   * The SearchService model module.
+   * @module model/SearchService
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>ClassifierService</code>.
+   * Constructs a new <code>SearchService</code>.
    * For the common properties detail check the [Service](#/definitions/Service)
-   * @alias module:model/ClassifierService
+   * @alias module:model/SearchService
    * @class
    * @param name
    * @param type
@@ -43,14 +43,14 @@
 
   };
 
-exports.prototype.typeName = 'ClassifierService';
+exports.prototype.typeName = 'SearchService';
 
   /**
-   * Constructs a <code>ClassifierService</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SearchService</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ClassifierService} obj Optional instance to populate.
-   * @return {module:model/ClassifierService} The populated <code>ClassifierService</code> instance.
+   * @param {module:model/SearchService} obj Optional instance to populate.
+   * @return {module:model/SearchService} The populated <code>SearchService</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -60,10 +60,10 @@ exports.prototype.typeName = 'ClassifierService';
       obj = obj || new exports();
 
       if (data.hasOwnProperty('PrepareSettings')) {
-        obj['PrepareSettings'] = ClassifierPrepareSettings.constructFromObject(data['PrepareSettings']);
+        obj['PrepareSettings'] = SearchPrepareSettings.constructFromObject(data['PrepareSettings']);
       }
       if (data.hasOwnProperty('ActivateSettings')) {
-        obj['ActivateSettings'] = ClassifierActivateSettings.constructFromObject(data['ActivateSettings']);
+        obj['ActivateSettings'] = SearchActivateSettings.constructFromObject(data['ActivateSettings']);
       }
       if (data.hasOwnProperty('Id')) {
         obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
@@ -95,12 +95,12 @@ exports.prototype.typeName = 'ClassifierService';
 
 
   /**
-   * @member {module:model/ClassifierPrepareSettings} PrepareSettings
+   * @member {module:model/SearchPrepareSettings} PrepareSettings
    */
   exports.prototype['PrepareSettings'] = undefined;
 
   /**
-   * @member {module:model/ClassifierActivateSettings} ActivateSettings
+   * @member {module:model/SearchActivateSettings} ActivateSettings
    */
   exports.prototype['ActivateSettings'] = undefined;
 
@@ -130,13 +130,13 @@ exports.prototype.typeName = 'ClassifierService';
 
   /**
    * New - the service was created | \r\nBusy - the service is working on something (e.g.: during the Prepare) | \r\nPrepared - the service was prepared so you can activate it to use | \r\nActive - the service so you can use it
-   * @member {module:model/ClassifierService.StatusEnum} Status
+   * @member {module:model/SearchService.StatusEnum} Status
    */
   exports.prototype['Status'] = undefined;
 
   /**
    * Type of the service.\r\nCurrently supported types:\r\n- Classifier\r\n- Prc
-   * @member {module:model/ClassifierService.TypeEnum} Type
+   * @member {module:model/SearchService.TypeEnum} Type
    */
   exports.prototype['Type'] = undefined;
 

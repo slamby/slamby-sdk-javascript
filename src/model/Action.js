@@ -10,38 +10,37 @@
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.PathItem = factory(root.SlambySdk.ApiClient);
+    root.SlambySdk.Action = factory(root.SlambySdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The PathItem model module.
-   * @module model/PathItem
+   * The Action model module.
+   * @module model/Action
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>PathItem</code>.
-   * Tag path item object
-   * @alias module:model/PathItem
+   * Constructs a new <code>Action</code>.
+   * An action which is measured by the statistics. Currently it is equivalent with the API endpoints
+   * @alias module:model/Action
    * @class
    */
   var exports = function() {
 
 
 
-
   };
 
-exports.prototype.typeName = 'PathItem';
+exports.prototype.typeName = 'Action';
 
   /**
-   * Constructs a <code>PathItem</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Action</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PathItem} obj Optional instance to populate.
-   * @return {module:model/PathItem} The populated <code>PathItem</code> instance.
+   * @param {module:model/Action} obj Optional instance to populate.
+   * @return {module:model/Action} The populated <code>Action</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -50,14 +49,11 @@ exports.prototype.typeName = 'PathItem';
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Id')) {
-        obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
-      }
       if (data.hasOwnProperty('Name')) {
         obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
       }
-      if (data.hasOwnProperty('Level')) {
-        obj['Level'] = ApiClient.convertToType(data['Level'], 'Integer');
+      if (data.hasOwnProperty('Count')) {
+        obj['Count'] = ApiClient.convertToType(data['Count'], 'Integer');
       }
     }
     return obj;
@@ -65,22 +61,16 @@ exports.prototype.typeName = 'PathItem';
 
 
   /**
-   * Id of the Tag
-   * @member {String} Id
-   */
-  exports.prototype['Id'] = undefined;
-
-  /**
-   * Name of the Tag
+   * The endpoint name with the HTTP method (if there are multiple HTTP methods for an endpoint)
    * @member {String} Name
    */
   exports.prototype['Name'] = undefined;
 
   /**
-   * Level of the Tag
-   * @member {Integer} Level
+   * The request count for this action in the current period
+   * @member {Integer} Count
    */
-  exports.prototype['Level'] = undefined;
+  exports.prototype['Count'] = undefined;
 
 
 

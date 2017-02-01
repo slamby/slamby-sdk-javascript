@@ -10,36 +10,36 @@
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.DataSetStats = factory(root.SlambySdk.ApiClient);
+    root.SlambySdk.SearchPrepareSettings = factory(root.SlambySdk.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The DataSetStats model module.
-   * @module model/DataSetStats
+   * The SearchPrepareSettings model module.
+   * @module model/SearchPrepareSettings
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>DataSetStats</code>.
-   * DataSetStats object
-   * @alias module:model/DataSetStats
+   * Constructs a new <code>SearchPrepareSettings</code>.
+   * @alias module:model/SearchPrepareSettings
    * @class
+   * @param dataSetName
    */
-  var exports = function() {
+  var exports = function(dataSetName) {
 
-
+    this['DataSetName'] = dataSetName;
   };
 
-exports.prototype.typeName = 'DataSetStats';
+exports.prototype.typeName = 'SearchPrepareSettings';
 
   /**
-   * Constructs a <code>DataSetStats</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SearchPrepareSettings</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DataSetStats} obj Optional instance to populate.
-   * @return {module:model/DataSetStats} The populated <code>DataSetStats</code> instance.
+   * @param {module:model/SearchPrepareSettings} obj Optional instance to populate.
+   * @return {module:model/SearchPrepareSettings} The populated <code>SearchPrepareSettings</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -48,8 +48,8 @@ exports.prototype.typeName = 'DataSetStats';
     if (data) { 
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('DocumentsCount')) {
-        obj['DocumentsCount'] = ApiClient.convertToType(data['DocumentsCount'], 'Integer');
+      if (data.hasOwnProperty('DataSetName')) {
+        obj['DataSetName'] = ApiClient.convertToType(data['DataSetName'], 'String');
       }
     }
     return obj;
@@ -57,10 +57,10 @@ exports.prototype.typeName = 'DataSetStats';
 
 
   /**
-   * Shows the available document number
-   * @member {Integer} DocumentsCount
+   * The name of the DataSet in which this service will search
+   * @member {String} DataSetName
    */
-  exports.prototype['DocumentsCount'] = undefined;
+  exports.prototype['DataSetName'] = undefined;
 
 
 

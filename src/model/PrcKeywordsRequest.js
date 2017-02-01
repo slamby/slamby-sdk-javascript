@@ -18,7 +18,7 @@
   /**
    * The PrcKeywordsRequest model module.
    * @module model/PrcKeywordsRequest
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -26,12 +26,11 @@
    * @alias module:model/PrcKeywordsRequest
    * @class
    * @param text
-   * @param tagId
    */
-  var exports = function(text, tagId) {
+  var exports = function(text) {
 
     this['Text'] = text;
-    this['TagId'] = tagId;
+
   };
 
 exports.prototype.typeName = 'PrcKeywordsRequest';
@@ -68,7 +67,7 @@ exports.prototype.typeName = 'PrcKeywordsRequest';
   exports.prototype['Text'] = undefined;
 
   /**
-   * The extracting keywords calculation depends on this Tag
+   * The extracting keywords calculation depends on this Tag. Prc Service try to detect it automatically if it's not provided
    * @member {String} TagId
    */
   exports.prototype['TagId'] = undefined;

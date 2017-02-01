@@ -18,7 +18,7 @@
   /**
    * The License model module.
    * @module model/License
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**

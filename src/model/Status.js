@@ -18,7 +18,7 @@
   /**
    * The Status model module.
    * @module model/Status
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -28,6 +28,7 @@
    * @class
    */
   var exports = function() {
+
 
 
 
@@ -65,6 +66,9 @@ exports.prototype.typeName = 'Status';
       if (data.hasOwnProperty('AvailableFreeSpace')) {
         obj['AvailableFreeSpace'] = ApiClient.convertToType(data['AvailableFreeSpace'], 'Number');
       }
+      if (data.hasOwnProperty('TotalSpace')) {
+        obj['TotalSpace'] = ApiClient.convertToType(data['TotalSpace'], 'Number');
+      }
       if (data.hasOwnProperty('TotalMemory')) {
         obj['TotalMemory'] = ApiClient.convertToType(data['TotalMemory'], 'Number');
       }
@@ -99,6 +103,12 @@ exports.prototype.typeName = 'Status';
    * @member {Number} AvailableFreeSpace
    */
   exports.prototype['AvailableFreeSpace'] = undefined;
+
+  /**
+   * Total disk space in MB
+   * @member {Number} TotalSpace
+   */
+  exports.prototype['TotalSpace'] = undefined;
 
   /**
    * Total physical memory in MB

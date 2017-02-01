@@ -10,20 +10,20 @@
     if (!root.SlambySdk) {
       root.SlambySdk = {};
     }
-    root.SlambySdk.ClassifierRecommendationResult = factory(root.SlambySdk.ApiClient, root.SlambySdk.Tag);
+    root.SlambySdk.SearchClassifierRecommendationResult = factory(root.SlambySdk.ApiClient, root.SlambySdk.Tag);
   }
 }(this, function(ApiClient, Tag) {
   'use strict';
 
   /**
-   * The ClassifierRecommendationResult model module.
-   * @module model/ClassifierRecommendationResult
+   * The SearchClassifierRecommendationResult model module.
+   * @module model/SearchClassifierRecommendationResult
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>ClassifierRecommendationResult</code>.
-   * @alias module:model/ClassifierRecommendationResult
+   * Constructs a new <code>SearchClassifierRecommendationResult</code>.
+   * @alias module:model/SearchClassifierRecommendationResult
    * @class
    */
   var exports = function() {
@@ -32,16 +32,17 @@
 
 
 
+
   };
 
-exports.prototype.typeName = 'ClassifierRecommendationResult';
+exports.prototype.typeName = 'SearchClassifierRecommendationResult';
 
   /**
-   * Constructs a <code>ClassifierRecommendationResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SearchClassifierRecommendationResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ClassifierRecommendationResult} obj Optional instance to populate.
-   * @return {module:model/ClassifierRecommendationResult} The populated <code>ClassifierRecommendationResult</code> instance.
+   * @param {module:model/SearchClassifierRecommendationResult} obj Optional instance to populate.
+   * @return {module:model/SearchClassifierRecommendationResult} The populated <code>SearchClassifierRecommendationResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (exports.prototype.typeName === 'ModelObject') { 
@@ -50,6 +51,9 @@ exports.prototype.typeName = 'ClassifierRecommendationResult';
     if (data) { 
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('SearchResultMatch')) {
+        obj['SearchResultMatch'] = ApiClient.convertToType(data['SearchResultMatch'], 'Boolean');
+      }
       if (data.hasOwnProperty('TagId')) {
         obj['TagId'] = ApiClient.convertToType(data['TagId'], 'String');
       }
@@ -66,6 +70,12 @@ exports.prototype.typeName = 'ClassifierRecommendationResult';
     return obj;
   }
 
+
+  /**
+   * If the recommended category is matched any of the search-matched documents categories
+   * @member {Boolean} SearchResultMatch
+   */
+  exports.prototype['SearchResultMatch'] = undefined;
 
   /**
    * The recommended tag id

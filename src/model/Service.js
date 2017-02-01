@@ -18,7 +18,7 @@
   /**
    * The Service model module.
    * @module model/Service
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -178,7 +178,13 @@ exports.prototype.typeName = 'Service';
      * value: Prc
      * @const
      */
-    PRC: "Prc"
+    PRC: "Prc",
+    
+    /**
+     * value: Search
+     * @const
+     */
+    SEARCH: "Search"
   };
 
   return exports;

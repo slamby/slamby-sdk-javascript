@@ -18,7 +18,7 @@
   /**
    * The DocumentFilterSettings model module.
    * @module model/DocumentFilterSettings
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**

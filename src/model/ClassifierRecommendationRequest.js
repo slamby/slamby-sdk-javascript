@@ -18,7 +18,7 @@
   /**
    * The ClassifierRecommendationRequest model module.
    * @module model/ClassifierRecommendationRequest
-   * @version 1.2.0
+   * @version 1.5.0
    */
 
   /**
@@ -30,6 +30,7 @@
   var exports = function(text) {
 
     this['Text'] = text;
+
 
 
 
@@ -63,6 +64,9 @@ exports.prototype.typeName = 'ClassifierRecommendationRequest';
       if (data.hasOwnProperty('NeedTagInResult')) {
         obj['NeedTagInResult'] = ApiClient.convertToType(data['NeedTagInResult'], 'Boolean');
       }
+      if (data.hasOwnProperty('ParentTagIdList')) {
+        obj['ParentTagIdList'] = ApiClient.convertToType(data['ParentTagIdList'], ['String']);
+      }
     }
     return obj;
   }
@@ -91,6 +95,12 @@ exports.prototype.typeName = 'ClassifierRecommendationRequest';
    * @member {Boolean} NeedTagInResult
    */
   exports.prototype['NeedTagInResult'] = undefined;
+
+  /**
+   * The recommendation process will be used only tags by these parent(s)
+   * @member {Array.<String>} ParentTagIdList
+   */
+  exports.prototype['ParentTagIdList'] = undefined;
 
 
 
