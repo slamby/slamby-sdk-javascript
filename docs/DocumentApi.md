@@ -66,7 +66,7 @@ No authorization required
 
 <a name="copyDocuments"></a>
 # **copyDocuments**
-> copyDocuments(opts)
+> Process copyDocuments(opts)
 
 
 
@@ -81,8 +81,8 @@ var opts = {
   'copySettings': new SlambySdk.DocumentCopySettings() // DocumentCopySettings | 
 };
 
-apiInstance.copyDocuments(opts).then(function() {
-  console.log('API called successfully.');
+apiInstance.copyDocuments(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Process**](Process.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ No authorization required
 
 <a name="moveDocuments"></a>
 # **moveDocuments**
-> moveDocuments(opts)
+> Process moveDocuments(opts)
 
 
 
@@ -364,8 +364,8 @@ var opts = {
   'moveSettings': new SlambySdk.DocumentMoveSettings() // DocumentMoveSettings | 
 };
 
-apiInstance.moveDocuments(opts).then(function() {
-  console.log('API called successfully.');
+apiInstance.moveDocuments(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Process**](Process.md)
 
 ### Authorization
 

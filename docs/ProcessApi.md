@@ -117,7 +117,8 @@ var SlambySdk = require('slamby-sdk');
 var apiInstance = new SlambySdk.ProcessApi();
 
 var opts = { 
-  'allStatus': true // Boolean | 
+  'allStatus': true, // Boolean | 
+  'allTime': true // Boolean | 
 };
 
 apiInstance.getProcesses(opts).then(function(data) {
@@ -134,6 +135,7 @@ apiInstance.getProcesses(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allStatus** | **Boolean**|  | [optional] 
+ **allTime** | **Boolean**|  | [optional] 
 
 
 ### Return type
