@@ -18,7 +18,7 @@
   /**
    * The ErrorsModel model module.
    * @module model/ErrorsModel
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

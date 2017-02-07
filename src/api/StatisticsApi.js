@@ -18,7 +18,7 @@
   /**
    * Statistics service.
    * @module api/StatisticsApi
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**
@@ -41,6 +41,85 @@
 
 
       var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = StatisticsWrapper;
+
+      return this.apiClient.callApi(
+        '/api/Statistics', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+
+    /**
+     * @param {Integer} year 
+     * data is of type: {module:model/StatisticsWrapper}
+     */
+    this.getStatistics_1 = function(year) {
+      var postBody = null;
+
+      // verify the required parameter 'year' is set
+      if (year == undefined || year == null) {
+        throw "Missing the required parameter 'year' when calling getStatistics_1";
+      }
+
+
+      var pathParams = {
+        'year': year
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = StatisticsWrapper;
+
+      return this.apiClient.callApi(
+        '/api/Statistics/{year}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+
+    /**
+     * @param {Integer} year 
+     * @param {Integer} month 
+     * data is of type: {module:model/StatisticsWrapper}
+     */
+    this.getStatistics_2 = function(year, month) {
+      var postBody = null;
+
+      // verify the required parameter 'year' is set
+      if (year == undefined || year == null) {
+        throw "Missing the required parameter 'year' when calling getStatistics_2";
+      }
+
+      // verify the required parameter 'month' is set
+      if (month == undefined || month == null) {
+        throw "Missing the required parameter 'month' when calling getStatistics_2";
+      }
+
+
+      var pathParams = {
+        'year': year,
+        'month': month
       };
       var queryParams = {
       };

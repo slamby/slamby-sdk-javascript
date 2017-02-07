@@ -18,7 +18,7 @@
   /**
    * The ClassifierRecommendationRequest model module.
    * @module model/ClassifierRecommendationRequest
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

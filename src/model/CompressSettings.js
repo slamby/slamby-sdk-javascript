@@ -18,7 +18,7 @@
   /**
    * The CompressSettings model module.
    * @module model/CompressSettings
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

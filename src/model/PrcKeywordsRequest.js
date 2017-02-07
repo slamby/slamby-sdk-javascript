@@ -18,7 +18,7 @@
   /**
    * The PrcKeywordsRequest model module.
    * @module model/PrcKeywordsRequest
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

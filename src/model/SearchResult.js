@@ -18,7 +18,7 @@
   /**
    * The SearchResult model module.
    * @module model/SearchResult
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

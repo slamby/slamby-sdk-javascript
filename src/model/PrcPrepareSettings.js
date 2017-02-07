@@ -18,7 +18,7 @@
   /**
    * The PrcPrepareSettings model module.
    * @module model/PrcPrepareSettings
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

@@ -18,7 +18,7 @@
   /**
    * The ClassifierPrepareSettings model module.
    * @module model/ClassifierPrepareSettings
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

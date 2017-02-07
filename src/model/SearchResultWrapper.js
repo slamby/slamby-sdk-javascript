@@ -18,7 +18,7 @@
   /**
    * The SearchResultWrapper model module.
    * @module model/SearchResultWrapper
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

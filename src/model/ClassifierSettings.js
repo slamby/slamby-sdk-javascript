@@ -18,7 +18,7 @@
   /**
    * The ClassifierSettings model module.
    * @module model/ClassifierSettings
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

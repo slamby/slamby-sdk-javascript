@@ -18,7 +18,7 @@
   /**
    * SearchService service.
    * @module api/SearchServiceApi
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**

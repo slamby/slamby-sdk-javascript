@@ -18,7 +18,7 @@
   /**
    * The SearchSettings model module.
    * @module model/SearchSettings
-   * @version 1.5.0
+   * @version 1.5.1
    */
 
   /**
@@ -149,7 +149,7 @@ exports.prototype.typeName = 'SearchSettings';
   exports.prototype['CutOffFrequency'] = undefined;
 
   /**
-   * Interpreted as a Levenshtein Edit Distance\u00E2\u20AC\u2030\u00E2\u20AC\u201D\u00E2\u20AC\u2030the number of one character changes that need to be made to one string to make it the same as another string. Can be specified as: -1 (generates an edit distance based on the length of the term) or 0, 1, 2 (the maximum allowed Levenshtein Edit Distance)
+   * Interpreted as a Levenshtein Edit Distance\u2009\u2014\u2009the number of one character changes that need to be made to one string to make it the same as another string. Can be specified as: -1 (generates an edit distance based on the length of the term) or 0, 1, 2 (the maximum allowed Levenshtein Edit Distance)
    * @member {Integer} Fuzziness
    */
   exports.prototype['Fuzziness'] = undefined;
